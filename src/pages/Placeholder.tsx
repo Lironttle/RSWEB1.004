@@ -25,7 +25,7 @@ export default function Placeholder() {
 
   return (
     <main className="pt-32">
-      <section className="section-padding bg-light">
+      <section className="section-padding bg-light dark:bg-gray-900">
         <div className="container-custom">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -34,10 +34,10 @@ export default function Placeholder() {
             className="text-center max-w-2xl mx-auto"
           >
             <Construction className="w-16 h-16 text-primary mx-auto mb-6" />
-            <h1 className="text-4xl md:text-5xl font-serif text-dark mb-6">
+            <h1 className="text-4xl md:text-5xl font-serif text-dark dark:text-white mb-6">
               {title}
             </h1>
-            <p className="text-muted text-lg mb-8">
+            <p className="text-muted dark:text-gray-400 text-lg mb-8">
               This page is under construction. Check back soon for more information
               about our {title.toLowerCase()}.
             </p>

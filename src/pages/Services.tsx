@@ -101,25 +101,25 @@ export default function Services() {
           backgroundPosition: 'center',
         }}
       >
-        <div className="absolute inset-0 bg-gradient-to-r from-white via-white/95 to-white/70" />
+        <div className="absolute inset-0 bg-gradient-to-r from-white dark:from-gray-950 via-white/95 dark:via-gray-950/95 to-white/70 dark:to-gray-950/70" />
 
         <div className="relative container-custom py-32">
           <motion.nav
             initial={{ opacity: 0, y: -10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
-            className="flex items-center gap-2 text-sm text-muted mb-6"
+            className="flex items-center gap-2 text-sm text-muted dark:text-gray-400 mb-6"
           >
             <Link to="/" className="hover:text-primary transition-colors">Home</Link>
             <ChevronRight size={16} />
-            <span className="text-dark font-medium">Services</span>
+            <span className="text-dark dark:text-white font-medium">Services</span>
           </motion.nav>
 
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.1 }}
-            className="text-5xl md:text-6xl lg:text-7xl font-serif text-dark mb-6"
+            className="text-5xl md:text-6xl lg:text-7xl font-serif text-dark dark:text-white mb-6"
           >
             Our Services
           </motion.h1>
@@ -128,7 +128,7 @@ export default function Services() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="text-lg text-muted max-w-2xl leading-relaxed"
+            className="text-lg text-muted dark:text-gray-400 max-w-2xl leading-relaxed"
           >
             From new builds to specialist cleaning, we provide comprehensive construction
             and property services backed by industry-leading accreditations and over 16 years
@@ -137,7 +137,7 @@ export default function Services() {
         </div>
       </section>
 
-      <section className="py-20 md:py-28 bg-white">
+      <section className="py-20 md:py-28 bg-white dark:bg-gray-950">
         <div className="container-custom">
           {services.map((service, index) => {
             const isEven = index % 2 === 0;
@@ -179,11 +179,11 @@ export default function Services() {
                     <service.icon className="w-8 h-8 text-primary" />
                   </div>
 
-                  <h2 className="text-3xl md:text-4xl font-serif text-dark mb-6">
+                  <h2 className="text-3xl md:text-4xl font-serif text-dark dark:text-white mb-6">
                     {service.title}
                   </h2>
 
-                  <p className="text-muted text-lg leading-relaxed mb-8">
+                  <p className="text-muted dark:text-gray-400 text-lg leading-relaxed mb-8">
                     {service.description}
                   </p>
 
@@ -193,7 +193,7 @@ export default function Services() {
                         <div className="w-5 h-5 bg-primary rounded-full flex items-center justify-center flex-shrink-0">
                           <Check className="w-3 h-3 text-white" />
                         </div>
-                        <span className="text-dark">{subService}</span>
+                        <span className="text-dark dark:text-gray-200">{subService}</span>
                       </li>
                     ))}
                   </ul>

@@ -80,25 +80,25 @@ export default function About() {
           backgroundPosition: 'center',
         }}
       >
-        <div className="absolute inset-0 bg-gradient-to-r from-white via-white/95 to-white/70" />
+        <div className="absolute inset-0 bg-gradient-to-r from-white dark:from-gray-950 via-white/95 dark:via-gray-950/95 to-white/70 dark:to-gray-950/70" />
 
         <div className="relative container-custom py-32">
           <motion.nav
             initial={{ opacity: 0, y: -10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
-            className="flex items-center gap-2 text-sm text-muted mb-6"
+            className="flex items-center gap-2 text-sm text-muted dark:text-gray-400 mb-6"
           >
             <Link to="/" className="hover:text-primary transition-colors">Home</Link>
             <ChevronRight size={16} />
-            <span className="text-dark font-medium">About Us</span>
+            <span className="text-dark dark:text-white font-medium">About Us</span>
           </motion.nav>
 
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.1 }}
-            className="text-5xl md:text-6xl lg:text-7xl font-serif text-dark mb-6"
+            className="text-5xl md:text-6xl lg:text-7xl font-serif text-dark dark:text-white mb-6"
           >
             About RS Construction
           </motion.h1>
@@ -115,7 +115,7 @@ export default function About() {
         </div>
       </section>
 
-      <section className="py-20 md:py-28 bg-white">
+      <section className="py-20 md:py-28 bg-white dark:bg-gray-950">
         <div className="container-custom">
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
             <motion.div
@@ -144,20 +144,20 @@ export default function About() {
               transition={{ duration: 0.6, delay: 0.2 }}
             >
               <span className="text-primary font-medium tracking-wide uppercase text-sm">Our Story</span>
-              <h2 className="text-3xl md:text-4xl font-serif text-dark mt-3 mb-6">
+              <h2 className="text-3xl md:text-4xl font-serif text-dark dark:text-white mt-3 mb-6">
                 Building Trust Since 2010
               </h2>
-              <p className="text-muted text-lg leading-relaxed mb-6">
+              <p className="text-muted dark:text-gray-400 text-lg leading-relaxed mb-6">
                 RS Construction and Property Services Ltd is a family-owned business established in 2010.
                 We've grown into a specialist contracting group with an ever-expanding client base built
                 on trust and quality.
               </p>
-              <p className="text-muted text-lg leading-relaxed mb-6">
+              <p className="text-muted dark:text-gray-400 text-lg leading-relaxed mb-6">
                 Our journey began with a simple commitment: deliver exceptional craftsmanship and genuine
                 care for every project. Today, we're proud to be one of London's most trusted construction
                 and property services providers.
               </p>
-              <p className="text-muted text-lg leading-relaxed">
+              <p className="text-muted dark:text-gray-400 text-lg leading-relaxed">
                 From residential renovations to commercial developments, our experienced team brings
                 dedication, expertise, and attention to detail to every job we undertake.
               </p>
@@ -166,7 +166,7 @@ export default function About() {
         </div>
       </section>
 
-      <section className="py-20 md:py-28 bg-light">
+      <section className="py-20 md:py-28 bg-light dark:bg-gray-900">
         <div className="container-custom">
           <motion.div
             initial="hidden"
@@ -176,7 +176,7 @@ export default function About() {
             className="text-center mb-16"
           >
             <span className="text-primary font-medium tracking-wide uppercase text-sm">Why Choose Us</span>
-            <h2 className="text-3xl md:text-4xl font-serif text-dark mt-3">
+            <h2 className="text-3xl md:text-4xl font-serif text-dark dark:text-white mt-3">
               Our Core Values
             </h2>
           </motion.div>
@@ -192,15 +192,15 @@ export default function About() {
               <motion.div
                 key={value.title}
                 variants={fadeInUp}
-                className="bg-white p-8 rounded-2xl shadow-sm hover:shadow-lg transition-shadow duration-300"
+                className="bg-white dark:bg-gray-800 p-8 rounded-2xl shadow-sm hover:shadow-lg transition-shadow duration-300"
               >
                 <div className="w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center mb-6">
                   <value.icon className="w-7 h-7 text-primary" />
                 </div>
-                <h3 className="text-xl font-semibold text-dark mb-3 uppercase tracking-wide">
+                <h3 className="text-xl font-semibold text-dark dark:text-white mb-3 uppercase tracking-wide">
                   {value.title}
                 </h3>
-                <p className="text-muted leading-relaxed">
+                <p className="text-muted dark:text-gray-400 leading-relaxed">
                   {value.description}
                 </p>
               </motion.div>
@@ -209,7 +209,7 @@ export default function About() {
         </div>
       </section>
 
-      <section className="py-20 md:py-28 bg-white">
+      <section className="py-20 md:py-28 bg-white dark:bg-gray-950">
         <div className="container-custom">
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
             <motion.div
@@ -219,10 +219,10 @@ export default function About() {
               transition={{ duration: 0.6 }}
             >
               <span className="text-primary font-medium tracking-wide uppercase text-sm">Service Area</span>
-              <h2 className="text-3xl md:text-4xl font-serif text-dark mt-3 mb-6">
+              <h2 className="text-3xl md:text-4xl font-serif text-dark dark:text-white mt-3 mb-6">
                 Serving London & Beyond
               </h2>
-              <p className="text-muted text-lg leading-relaxed mb-8">
+              <p className="text-muted dark:text-gray-400 text-lg leading-relaxed mb-8">
                 Based in East London, our services cover East, North, and Central London.
                 We've successfully completed projects across the greater London area and
                 continue to expand our reach to serve more communities.
@@ -231,8 +231,8 @@ export default function About() {
               <div className="space-y-4">
                 {coverageAreas.map((area) => (
                   <div key={area.name} className="flex items-center gap-3">
-                    <MapPin className={`w-5 h-5 ${area.primary ? 'text-primary' : 'text-muted'}`} />
-                    <span className={`${area.primary ? 'text-dark font-medium' : 'text-muted'}`}>
+                    <MapPin className={`w-5 h-5 ${area.primary ? 'text-primary' : 'text-muted dark:text-gray-400'}`} />
+                    <span className={`${area.primary ? 'text-dark dark:text-white font-medium' : 'text-muted dark:text-gray-400'}`}>
                       {area.name}
                       {area.primary && <span className="text-primary ml-2">(Headquarters)</span>}
                     </span>
@@ -248,7 +248,7 @@ export default function About() {
               transition={{ duration: 0.6, delay: 0.2 }}
               className="relative"
             >
-              <div className="bg-light rounded-2xl p-8 relative overflow-hidden">
+              <div className="bg-light dark:bg-gray-900 rounded-2xl p-8 relative overflow-hidden">
                 <div className="absolute inset-0 opacity-10">
                   <svg viewBox="0 0 400 400" className="w-full h-full">
                     <circle cx="200" cy="200" r="150" fill="none" stroke="currentColor" strokeWidth="1" className="text-primary" />
@@ -259,21 +259,21 @@ export default function About() {
 
                 <div className="relative grid grid-cols-3 gap-4">
                   <div className="col-start-2 flex justify-center">
-                    <div className="bg-white p-4 rounded-xl shadow-sm text-center">
-                      <MapPin className="w-6 h-6 text-muted mx-auto mb-2" />
-                      <span className="text-sm text-muted">North</span>
+                    <div className="bg-white dark:bg-gray-800 p-4 rounded-xl shadow-sm text-center">
+                      <MapPin className="w-6 h-6 text-muted dark:text-gray-400 mx-auto mb-2" />
+                      <span className="text-sm text-muted dark:text-gray-400">North</span>
                     </div>
                   </div>
                   <div className="flex justify-center">
-                    <div className="bg-white p-4 rounded-xl shadow-sm text-center">
-                      <MapPin className="w-6 h-6 text-muted mx-auto mb-2" />
-                      <span className="text-sm text-muted">West</span>
+                    <div className="bg-white dark:bg-gray-800 p-4 rounded-xl shadow-sm text-center">
+                      <MapPin className="w-6 h-6 text-muted dark:text-gray-400 mx-auto mb-2" />
+                      <span className="text-sm text-muted dark:text-gray-400">West</span>
                     </div>
                   </div>
                   <div className="flex justify-center">
-                    <div className="bg-white p-4 rounded-xl shadow-sm text-center">
-                      <MapPin className="w-6 h-6 text-muted mx-auto mb-2" />
-                      <span className="text-sm text-muted">Central</span>
+                    <div className="bg-white dark:bg-gray-800 p-4 rounded-xl shadow-sm text-center">
+                      <MapPin className="w-6 h-6 text-muted dark:text-gray-400 mx-auto mb-2" />
+                      <span className="text-sm text-muted dark:text-gray-400">Central</span>
                     </div>
                   </div>
                   <div className="flex justify-center">
@@ -283,9 +283,9 @@ export default function About() {
                     </div>
                   </div>
                   <div className="col-start-2 flex justify-center">
-                    <div className="bg-white p-4 rounded-xl shadow-sm text-center">
-                      <MapPin className="w-6 h-6 text-muted mx-auto mb-2" />
-                      <span className="text-sm text-muted">South</span>
+                    <div className="bg-white dark:bg-gray-800 p-4 rounded-xl shadow-sm text-center">
+                      <MapPin className="w-6 h-6 text-muted dark:text-gray-400 mx-auto mb-2" />
+                      <span className="text-sm text-muted dark:text-gray-400">South</span>
                     </div>
                   </div>
                 </div>

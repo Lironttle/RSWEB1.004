@@ -1,7 +1,8 @@
 import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Menu, X, Phone, Mail } from 'lucide-react';
+import { Menu, X, Phone, Mail, Sun, Moon } from 'lucide-react';
+import { useTheme } from '../../hooks/useTheme';
 
 const navItems = [
   { label: 'Home', path: '/' },
@@ -16,6 +17,7 @@ export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const location = useLocation();
+  const { isDark, toggleTheme } = useTheme();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -47,11 +49,18 @@ export default function Header() {
             <Mail size={14} />
             info@rs-construction.com
           </a>
+          <button
+            onClick={toggleTheme}
+            className="flex items-center gap-2 hover:text-primary transition-colors p-1 rounded"
+            aria-label={isDark ? 'Switch to light mode' : 'Switch to dark mode'}
+          >
+            {isDark ? <Sun size={16} /> : <Moon size={16} />}
+          </button>
         </div>
       </div>
 
       <nav
-        className={`bg-white transition-all duration-300 ${
+        className={`bg-white dark:bg-gray-900 transition-all duration-300 ${
           isScrolled ? 'shadow-lg' : ''
         }`}
       >
@@ -74,7 +83,7 @@ export default function Header() {
                     location.pathname === item.path ||
                     (item.path !== '/' && location.pathname.startsWith(item.path))
                       ? 'text-primary'
-                      : 'text-dark hover:text-primary'
+                      : 'text-dark dark:text-white hover:text-primary'
                   }`}
                 >
                   {item.label}
@@ -92,7 +101,7 @@ export default function Header() {
 
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="lg:hidden p-2 text-dark hover:text-primary transition-colors"
+              className="lg:hidden p-2 text-dark dark:text-white hover:text-primary transition-colors"
               aria-label="Toggle menu"
             >
               {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
@@ -108,10 +117,10 @@ export default function Header() {
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: '100%' }}
             transition={{ type: 'tween', duration: 0.3 }}
-            className="fixed inset-y-0 right-0 w-full max-w-sm bg-white shadow-2xl lg:hidden z-50"
+            className="fixed inset-y-0 right-0 w-full max-w-sm bg-white dark:bg-gray-900 shadow-2xl lg:hidden z-50"
           >
             <div className="flex flex-col h-full">
-              <div className="flex items-center justify-between p-6 border-b">
+              <div className="flex items-center justify-between p-6 border-b dark:border-gray-700">
                 <img
                   src="/images/logo/RS LOGO.png"
                   alt="RS Construction"
@@ -119,7 +128,7 @@ export default function Header() {
                 />
                 <button
                   onClick={() => setIsMobileMenuOpen(false)}
-                  className="p-2 text-dark hover:text-primary transition-colors"
+                  className="p-2 text-dark dark:text-white hover:text-primary transition-colors"
                 >
                   <X size={24} />
                 </button>
@@ -134,7 +143,7 @@ export default function Header() {
                       location.pathname === item.path ||
                       (item.path !== '/' && location.pathname.startsWith(item.path))
                         ? 'text-primary bg-primary/5 border-l-4 border-primary'
-                        : 'text-dark hover:text-primary hover:bg-light border-l-4 border-transparent'
+                        : 'text-dark dark:text-white hover:text-primary hover:bg-light dark:hover:bg-gray-800 border-l-4 border-transparent'
                     }`}
                   >
                     {item.label}
@@ -142,17 +151,17 @@ export default function Header() {
                 ))}
               </nav>
 
-              <div className="p-6 border-t bg-light">
+              <div className="p-6 border-t dark:border-gray-700 bg-light dark:bg-gray-800">
                 <a
                   href="tel:02074732842"
-                  className="flex items-center gap-3 text-dark hover:text-primary transition-colors mb-3"
+                  className="flex items-center gap-3 text-dark dark:text-gray-300 hover:text-primary transition-colors mb-3"
                 >
                   <Phone size={18} />
                   020 7473 2842
                 </a>
                 <a
                   href="mailto:info@rs-construction.com"
-                  className="flex items-center gap-3 text-dark hover:text-primary transition-colors"
+                  className="flex items-center gap-3 text-dark dark:text-gray-300 hover:text-primary transition-colors"
                 >
                   <Mail size={18} />
                   info@rs-construction.com

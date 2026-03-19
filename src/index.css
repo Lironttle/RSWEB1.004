@@ -8,7 +8,7 @@
   }
 
   body {
-    @apply font-sans text-dark antialiased;
+    @apply font-sans text-dark dark:text-gray-200 antialiased bg-white dark:bg-gray-950;
   }
 
   h1, h2, h3, h4, h5, h6 {
@@ -18,7 +18,7 @@
 
 @layer components {
   .glass-card {
-    @apply bg-white/80 backdrop-blur-sm border border-white/20 shadow-lg;
+    @apply bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm border border-white/20 dark:border-gray-700/20 shadow-lg;
   }
 
   .btn-primary {
@@ -26,7 +26,7 @@
   }
 
   .btn-outline {
-    @apply border-2 border-dark text-dark px-6 py-3 font-medium transition-all duration-300 hover:bg-dark hover:text-white;
+    @apply border-2 border-dark dark:border-white text-dark dark:text-white px-6 py-3 font-medium transition-all duration-300 hover:bg-dark dark:hover:bg-white hover:text-white dark:hover:text-dark;
   }
 
   .section-padding {

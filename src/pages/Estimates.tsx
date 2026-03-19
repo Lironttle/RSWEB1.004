@@ -197,6 +197,14 @@ export default function Estimates() {
     }
   };
 
+  const inputClasses = (hasError: boolean) =>
+    `w-full px-4 py-3 rounded-lg border ${
+      hasError ? 'border-red-500' : 'border-gray-200 dark:border-gray-700'
+    } focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-colors bg-white dark:bg-gray-900 dark:text-white`;
+
+  const selectClasses =
+    'w-full px-4 py-3 rounded-lg border border-gray-200 dark:border-gray-700 focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-colors bg-white dark:bg-gray-900 dark:text-white';
+
   return (
     <main>
       <section
@@ -207,25 +215,25 @@ export default function Estimates() {
           backgroundPosition: 'center',
         }}
       >
-        <div className="absolute inset-0 bg-gradient-to-r from-white via-white/95 to-white/70" />
+        <div className="absolute inset-0 bg-gradient-to-r from-white dark:from-gray-950 via-white/95 dark:via-gray-950/95 to-white/70 dark:to-gray-950/70" />
 
         <div className="relative container-custom py-32">
           <motion.nav
             initial={{ opacity: 0, y: -10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
-            className="flex items-center gap-2 text-sm text-muted mb-6"
+            className="flex items-center gap-2 text-sm text-muted dark:text-gray-400 mb-6"
           >
             <Link to="/" className="hover:text-primary transition-colors">Home</Link>
             <ChevronRight size={16} />
-            <span className="text-dark font-medium">Estimates</span>
+            <span className="text-dark dark:text-white font-medium">Estimates</span>
           </motion.nav>
 
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.1 }}
-            className="text-5xl md:text-6xl lg:text-7xl font-serif text-dark mb-6"
+            className="text-5xl md:text-6xl lg:text-7xl font-serif text-dark dark:text-white mb-6"
           >
             Request a Free Estimate
           </motion.h1>
@@ -234,7 +242,7 @@ export default function Estimates() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="text-lg text-muted max-w-2xl leading-relaxed"
+            className="text-lg text-muted dark:text-gray-400 max-w-2xl leading-relaxed"
           >
             Tell us about your project and we'll get back within 24 hours with a
             detailed, no-obligation quote.
@@ -242,7 +250,7 @@ export default function Estimates() {
         </div>
       </section>
 
-      <section className="py-20 md:py-28 bg-light">
+      <section className="py-20 md:py-28 bg-light dark:bg-gray-900">
         <div className="container-custom">
           <div className="grid lg:grid-cols-3 gap-12 lg:gap-16">
             <motion.div
@@ -252,20 +260,20 @@ export default function Estimates() {
               transition={{ duration: 0.6 }}
               className="lg:col-span-2"
             >
-              <div className="bg-white rounded-2xl shadow-lg p-8 md:p-10">
+              <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-lg p-8 md:p-10">
                 {submitStatus === 'success' && (
-                  <div className="mb-8 p-4 bg-green-50 border border-green-200 rounded-lg flex items-center gap-3">
+                  <div className="mb-8 p-4 bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800 rounded-lg flex items-center gap-3">
                     <CheckCircle className="w-5 h-5 text-green-600 flex-shrink-0" />
-                    <p className="text-green-800">
+                    <p className="text-green-800 dark:text-green-400">
                       Thank you for your request! We'll get back to you within 24 hours.
                     </p>
                   </div>
                 )}
 
                 {submitStatus === 'error' && (
-                  <div className="mb-8 p-4 bg-red-50 border border-red-200 rounded-lg flex items-center gap-3">
+                  <div className="mb-8 p-4 bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 rounded-lg flex items-center gap-3">
                     <AlertCircle className="w-5 h-5 text-red-600 flex-shrink-0" />
-                    <p className="text-red-800">
+                    <p className="text-red-800 dark:text-red-400">
                       Something went wrong. Please try again or call us directly.
                     </p>
                   </div>
@@ -273,10 +281,10 @@ export default function Estimates() {
 
                 <form onSubmit={handleSubmit} className="space-y-8">
                   <div>
-                    <h3 className="text-lg font-semibold text-dark mb-4">Personal Information</h3>
+                    <h3 className="text-lg font-semibold text-dark dark:text-white mb-4">Personal Information</h3>
                     <div className="grid md:grid-cols-2 gap-6">
                       <div>
-                        <label htmlFor="name" className="block text-sm font-medium text-dark mb-2">
+                        <label htmlFor="name" className="block text-sm font-medium text-dark dark:text-gray-200 mb-2">
                           Name <span className="text-primary">*</span>
                         </label>
                         <input
@@ -285,9 +293,7 @@ export default function Estimates() {
                           name="name"
                           value={formData.name}
                           onChange={handleChange}
-                          className={`w-full px-4 py-3 rounded-lg border ${
-                            errors.name ? 'border-red-500' : 'border-gray-200'
-                          } focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-colors`}
+                          className={inputClasses(!!errors.name)}
                           placeholder="Your full name"
                         />
                         {errors.name && (
@@ -296,7 +302,7 @@ export default function Estimates() {
                       </div>
 
                       <div>
-                        <label htmlFor="email" className="block text-sm font-medium text-dark mb-2">
+                        <label htmlFor="email" className="block text-sm font-medium text-dark dark:text-gray-200 mb-2">
                           Email <span className="text-primary">*</span>
                         </label>
                         <input
@@ -305,9 +311,7 @@ export default function Estimates() {
                           name="email"
                           value={formData.email}
                           onChange={handleChange}
-                          className={`w-full px-4 py-3 rounded-lg border ${
-                            errors.email ? 'border-red-500' : 'border-gray-200'
-                          } focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-colors`}
+                          className={inputClasses(!!errors.email)}
                           placeholder="your@email.com"
                         />
                         {errors.email && (
@@ -316,7 +320,7 @@ export default function Estimates() {
                       </div>
 
                       <div className="md:col-span-2">
-                        <label htmlFor="phone" className="block text-sm font-medium text-dark mb-2">
+                        <label htmlFor="phone" className="block text-sm font-medium text-dark dark:text-gray-200 mb-2">
                           Phone <span className="text-primary">*</span>
                         </label>
                         <input
@@ -325,9 +329,7 @@ export default function Estimates() {
                           name="phone"
                           value={formData.phone}
                           onChange={handleChange}
-                          className={`w-full px-4 py-3 rounded-lg border ${
-                            errors.phone ? 'border-red-500' : 'border-gray-200'
-                          } focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-colors`}
+                          className={inputClasses(!!errors.phone)}
                           placeholder="020 1234 5678"
                         />
                         {errors.phone && (
@@ -337,11 +339,11 @@ export default function Estimates() {
                     </div>
                   </div>
 
-                  <div className="border-t border-gray-100 pt-8">
-                    <h3 className="text-lg font-semibold text-dark mb-4">Project Details</h3>
+                  <div className="border-t border-gray-100 dark:border-gray-700 pt-8">
+                    <h3 className="text-lg font-semibold text-dark dark:text-white mb-4">Project Details</h3>
                     <div className="grid md:grid-cols-2 gap-6">
                       <div>
-                        <label htmlFor="propertyType" className="block text-sm font-medium text-dark mb-2">
+                        <label htmlFor="propertyType" className="block text-sm font-medium text-dark dark:text-gray-200 mb-2">
                           Property Type
                         </label>
                         <select
@@ -349,7 +351,7 @@ export default function Estimates() {
                           name="propertyType"
                           value={formData.propertyType}
                           onChange={handleChange}
-                          className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-colors bg-white"
+                          className={selectClasses}
                         >
                           <option value="">Select property type</option>
                           {propertyTypes.map((type) => (
@@ -359,7 +361,7 @@ export default function Estimates() {
                       </div>
 
                       <div>
-                        <label htmlFor="service" className="block text-sm font-medium text-dark mb-2">
+                        <label htmlFor="service" className="block text-sm font-medium text-dark dark:text-gray-200 mb-2">
                           Service Required
                         </label>
                         <select
@@ -367,7 +369,7 @@ export default function Estimates() {
                           name="service"
                           value={formData.service}
                           onChange={handleChange}
-                          className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-colors bg-white"
+                          className={selectClasses}
                         >
                           <option value="">Select a service</option>
                           {services.map((service) => (
@@ -377,7 +379,7 @@ export default function Estimates() {
                       </div>
 
                       <div>
-                        <label htmlFor="projectSize" className="block text-sm font-medium text-dark mb-2">
+                        <label htmlFor="projectSize" className="block text-sm font-medium text-dark dark:text-gray-200 mb-2">
                           Project Size
                         </label>
                         <select
@@ -385,7 +387,7 @@ export default function Estimates() {
                           name="projectSize"
                           value={formData.projectSize}
                           onChange={handleChange}
-                          className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-colors bg-white"
+                          className={selectClasses}
                         >
                           <option value="">Select project size</option>
                           {projectSizes.map((size) => (
@@ -395,7 +397,7 @@ export default function Estimates() {
                       </div>
 
                       <div>
-                        <label htmlFor="timeline" className="block text-sm font-medium text-dark mb-2">
+                        <label htmlFor="timeline" className="block text-sm font-medium text-dark dark:text-gray-200 mb-2">
                           Timeline
                         </label>
                         <select
@@ -403,7 +405,7 @@ export default function Estimates() {
                           name="timeline"
                           value={formData.timeline}
                           onChange={handleChange}
-                          className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-colors bg-white"
+                          className={selectClasses}
                         >
                           <option value="">Select timeline</option>
                           {timelines.map((t) => (
@@ -413,7 +415,7 @@ export default function Estimates() {
                       </div>
 
                       <div className="md:col-span-2">
-                        <label htmlFor="budgetRange" className="block text-sm font-medium text-dark mb-2">
+                        <label htmlFor="budgetRange" className="block text-sm font-medium text-dark dark:text-gray-200 mb-2">
                           Budget Range
                         </label>
                         <select
@@ -421,7 +423,7 @@ export default function Estimates() {
                           name="budgetRange"
                           value={formData.budgetRange}
                           onChange={handleChange}
-                          className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-colors bg-white"
+                          className={selectClasses}
                         >
                           <option value="">Select budget range</option>
                           {budgetRanges.map((range) => (
@@ -432,8 +434,8 @@ export default function Estimates() {
                     </div>
                   </div>
 
-                  <div className="border-t border-gray-100 pt-8">
-                    <label htmlFor="description" className="block text-sm font-medium text-dark mb-2">
+                  <div className="border-t border-gray-100 dark:border-gray-700 pt-8">
+                    <label htmlFor="description" className="block text-sm font-medium text-dark dark:text-gray-200 mb-2">
                       Project Description
                     </label>
                     <textarea
@@ -442,23 +444,23 @@ export default function Estimates() {
                       value={formData.description}
                       onChange={handleChange}
                       rows={5}
-                      className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-colors resize-none"
+                      className="w-full px-4 py-3 rounded-lg border border-gray-200 dark:border-gray-700 focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-colors resize-none bg-white dark:bg-gray-900 dark:text-white"
                       placeholder="Tell us about your project requirements, any specific needs, or questions you have..."
                     />
                   </div>
 
-                  <div className="border-t border-gray-100 pt-8">
-                    <label className="block text-sm font-medium text-dark mb-2">
+                  <div className="border-t border-gray-100 dark:border-gray-700 pt-8">
+                    <label className="block text-sm font-medium text-dark dark:text-gray-200 mb-2">
                       Attach Plans or Photos
                     </label>
                     <div
                       onDragOver={(e) => e.preventDefault()}
                       onDrop={handleFileDrop}
                       onClick={() => fileInputRef.current?.click()}
-                      className="border-2 border-dashed border-gray-200 rounded-lg p-8 text-center cursor-pointer hover:border-primary/50 hover:bg-primary/5 transition-colors"
+                      className="border-2 border-dashed border-gray-200 dark:border-gray-700 rounded-lg p-8 text-center cursor-pointer hover:border-primary/50 hover:bg-primary/5 transition-colors"
                     >
                       <Upload className="w-10 h-10 text-gray-400 mx-auto mb-4" />
-                      <p className="text-muted mb-2">
+                      <p className="text-muted dark:text-gray-400 mb-2">
                         Drag and drop files here, or click to browse
                       </p>
                       <p className="text-sm text-gray-400">
@@ -479,18 +481,18 @@ export default function Estimates() {
                         {files.map((file, index) => (
                           <div
                             key={index}
-                            className="flex items-center justify-between p-3 bg-gray-50 rounded-lg"
+                            className="flex items-center justify-between p-3 bg-gray-50 dark:bg-gray-900 rounded-lg"
                           >
                             <div className="flex items-center gap-3">
                               <FileText className="w-5 h-5 text-gray-400" />
-                              <span className="text-sm text-dark truncate max-w-[200px]">
+                              <span className="text-sm text-dark dark:text-gray-200 truncate max-w-[200px]">
                                 {file.name}
                               </span>
                             </div>
                             <button
                               type="button"
                               onClick={() => removeFile(index)}
-                              className="p-1 hover:bg-gray-200 rounded transition-colors"
+                              className="p-1 hover:bg-gray-200 dark:hover:bg-gray-700 rounded transition-colors"
                             >
                               <X className="w-4 h-4 text-gray-500" />
                             </button>
@@ -500,7 +502,7 @@ export default function Estimates() {
                     )}
                   </div>
 
-                  <div className="border-t border-gray-100 pt-8">
+                  <div className="border-t border-gray-100 dark:border-gray-700 pt-8">
                     <label className="flex items-start gap-3 cursor-pointer">
                       <input
                         type="checkbox"
@@ -509,7 +511,7 @@ export default function Estimates() {
                         onChange={handleChange}
                         className="mt-1 w-5 h-5 rounded border-gray-300 text-primary focus:ring-primary"
                       />
-                      <span className="text-sm text-muted">
+                      <span className="text-sm text-muted dark:text-gray-400">
                         I agree to be contacted about my enquiry. Your information will be kept
                         confidential and will not be shared with third parties.
                       </span>
@@ -544,8 +546,8 @@ export default function Estimates() {
               transition={{ duration: 0.6, delay: 0.2 }}
               className="lg:col-span-1"
             >
-              <div className="bg-white rounded-2xl shadow-lg p-8 sticky top-40">
-                <h3 className="text-xl font-serif text-dark mb-6">
+              <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-lg p-8 sticky top-40">
+                <h3 className="text-xl font-serif text-dark dark:text-white mb-6">
                   Why Choose RS Construction?
                 </h3>
 
@@ -560,13 +562,13 @@ export default function Estimates() {
                       className="flex items-start gap-3"
                     >
                       <benefit.icon className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
-                      <span className="text-dark">{benefit.text}</span>
+                      <span className="text-dark dark:text-gray-200">{benefit.text}</span>
                     </motion.li>
                   ))}
                 </ul>
 
-                <div className="mt-8 pt-8 border-t border-gray-100">
-                  <p className="text-sm text-muted mb-4">
+                <div className="mt-8 pt-8 border-t border-gray-100 dark:border-gray-700">
+                  <p className="text-sm text-muted dark:text-gray-400 mb-4">
                     Prefer to speak with someone directly?
                   </p>
                   <a

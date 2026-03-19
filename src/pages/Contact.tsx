@@ -153,25 +153,25 @@ export default function Contact() {
           backgroundPosition: 'center',
         }}
       >
-        <div className="absolute inset-0 bg-gradient-to-r from-white via-white/95 to-white/70" />
+        <div className="absolute inset-0 bg-gradient-to-r from-white dark:from-gray-950 via-white/95 dark:via-gray-950/95 to-white/70 dark:to-gray-950/70" />
 
         <div className="relative container-custom py-32">
           <motion.nav
             initial={{ opacity: 0, y: -10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
-            className="flex items-center gap-2 text-sm text-muted mb-6"
+            className="flex items-center gap-2 text-sm text-muted dark:text-gray-400 mb-6"
           >
             <Link to="/" className="hover:text-primary transition-colors">Home</Link>
             <ChevronRight size={16} />
-            <span className="text-dark font-medium">Contact</span>
+            <span className="text-dark dark:text-white font-medium">Contact</span>
           </motion.nav>
 
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.1 }}
-            className="text-5xl md:text-6xl lg:text-7xl font-serif text-dark mb-6"
+            className="text-5xl md:text-6xl lg:text-7xl font-serif text-dark dark:text-white mb-6"
           >
             Get In Touch
           </motion.h1>
@@ -180,7 +180,7 @@ export default function Contact() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="text-lg text-muted max-w-2xl leading-relaxed"
+            className="text-lg text-muted dark:text-gray-400 max-w-2xl leading-relaxed"
           >
             We'd love to hear about your project. Get in touch with our team for
             expert advice and a free, no-obligation quote.
@@ -188,7 +188,7 @@ export default function Contact() {
         </div>
       </section>
 
-      <section className="py-20 md:py-28 bg-white">
+      <section className="py-20 md:py-28 bg-white dark:bg-gray-950">
         <div className="container-custom">
           <div className="grid lg:grid-cols-5 gap-12 lg:gap-16">
             <motion.div
@@ -198,21 +198,21 @@ export default function Contact() {
               transition={{ duration: 0.6 }}
               className="lg:col-span-3"
             >
-              <h2 className="text-3xl font-serif text-dark mb-8">Send Us a Message</h2>
+              <h2 className="text-3xl font-serif text-dark dark:text-white mb-8">Send Us a Message</h2>
 
               {submitStatus === 'success' && (
-                <div className="mb-8 p-4 bg-green-50 border border-green-200 rounded-lg flex items-center gap-3">
+                <div className="mb-8 p-4 bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800 rounded-lg flex items-center gap-3">
                   <CheckCircle className="w-5 h-5 text-green-600 flex-shrink-0" />
-                  <p className="text-green-800">
+                  <p className="text-green-800 dark:text-green-400">
                     Thank you for your message! We'll get back to you within 24 hours.
                   </p>
                 </div>
               )}
 
               {submitStatus === 'error' && (
-                <div className="mb-8 p-4 bg-red-50 border border-red-200 rounded-lg flex items-center gap-3">
+                <div className="mb-8 p-4 bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 rounded-lg flex items-center gap-3">
                   <AlertCircle className="w-5 h-5 text-red-600 flex-shrink-0" />
-                  <p className="text-red-800">
+                  <p className="text-red-800 dark:text-red-400">
                     Something went wrong. Please try again or call us directly.
                   </p>
                 </div>
@@ -221,7 +221,7 @@ export default function Contact() {
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid md:grid-cols-2 gap-6">
                   <div>
-                    <label htmlFor="name" className="block text-sm font-medium text-dark mb-2">
+                    <label htmlFor="name" className="block text-sm font-medium text-dark dark:text-gray-200 mb-2">
                       Name <span className="text-primary">*</span>
                     </label>
                     <input
@@ -231,8 +231,8 @@ export default function Contact() {
                       value={formData.name}
                       onChange={handleChange}
                       className={`w-full px-4 py-3 rounded-lg border ${
-                        errors.name ? 'border-red-500' : 'border-gray-200'
-                      } focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-colors`}
+                        errors.name ? 'border-red-500' : 'border-gray-200 dark:border-gray-700'
+                      } focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-colors bg-white dark:bg-gray-900 dark:text-white`}
                       placeholder="Your name"
                     />
                     {errors.name && (
@@ -241,7 +241,7 @@ export default function Contact() {
                   </div>
 
                   <div>
-                    <label htmlFor="email" className="block text-sm font-medium text-dark mb-2">
+                    <label htmlFor="email" className="block text-sm font-medium text-dark dark:text-gray-200 mb-2">
                       Email <span className="text-primary">*</span>
                     </label>
                     <input
@@ -251,8 +251,8 @@ export default function Contact() {
                       value={formData.email}
                       onChange={handleChange}
                       className={`w-full px-4 py-3 rounded-lg border ${
-                        errors.email ? 'border-red-500' : 'border-gray-200'
-                      } focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-colors`}
+                        errors.email ? 'border-red-500' : 'border-gray-200 dark:border-gray-700'
+                      } focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-colors bg-white dark:bg-gray-900 dark:text-white`}
                       placeholder="your@email.com"
                     />
                     {errors.email && (
@@ -263,7 +263,7 @@ export default function Contact() {
 
                 <div className="grid md:grid-cols-2 gap-6">
                   <div>
-                    <label htmlFor="phone" className="block text-sm font-medium text-dark mb-2">
+                    <label htmlFor="phone" className="block text-sm font-medium text-dark dark:text-gray-200 mb-2">
                       Phone
                     </label>
                     <input
@@ -273,8 +273,8 @@ export default function Contact() {
                       value={formData.phone}
                       onChange={handleChange}
                       className={`w-full px-4 py-3 rounded-lg border ${
-                        errors.phone ? 'border-red-500' : 'border-gray-200'
-                      } focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-colors`}
+                        errors.phone ? 'border-red-500' : 'border-gray-200 dark:border-gray-700'
+                      } focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-colors bg-white dark:bg-gray-900 dark:text-white`}
                       placeholder="020 1234 5678"
                     />
                     {errors.phone && (
@@ -283,7 +283,7 @@ export default function Contact() {
                   </div>
 
                   <div>
-                    <label htmlFor="service" className="block text-sm font-medium text-dark mb-2">
+                    <label htmlFor="service" className="block text-sm font-medium text-dark dark:text-gray-200 mb-2">
                       Service Required
                     </label>
                     <select
@@ -291,7 +291,7 @@ export default function Contact() {
                       name="service"
                       value={formData.service}
                       onChange={handleChange}
-                      className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-colors bg-white"
+                      className="w-full px-4 py-3 rounded-lg border border-gray-200 dark:border-gray-700 focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-colors bg-white dark:bg-gray-900 dark:text-white"
                     >
                       <option value="">Select a service</option>
                       {services.map((service) => (
@@ -304,7 +304,7 @@ export default function Contact() {
                 </div>
 
                 <div>
-                  <label htmlFor="message" className="block text-sm font-medium text-dark mb-2">
+                  <label htmlFor="message" className="block text-sm font-medium text-dark dark:text-gray-200 mb-2">
                     Message <span className="text-primary">*</span>
                   </label>
                   <textarea
@@ -314,8 +314,8 @@ export default function Contact() {
                     onChange={handleChange}
                     rows={6}
                     className={`w-full px-4 py-3 rounded-lg border ${
-                      errors.message ? 'border-red-500' : 'border-gray-200'
-                    } focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-colors resize-none`}
+                      errors.message ? 'border-red-500' : 'border-gray-200 dark:border-gray-700'
+                    } focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-colors resize-none bg-white dark:bg-gray-900 dark:text-white`}
                     placeholder="Tell us about your project..."
                   />
                   {errors.message && (
@@ -350,28 +350,28 @@ export default function Contact() {
               transition={{ duration: 0.6, delay: 0.2 }}
               className="lg:col-span-2"
             >
-              <h2 className="text-3xl font-serif text-dark mb-8">Contact Information</h2>
+              <h2 className="text-3xl font-serif text-dark dark:text-white mb-8">Contact Information</h2>
 
               <div className="space-y-6">
                 {contactInfo.map((info) => (
-                  <div key={info.label} className="bg-light p-6 rounded-xl">
+                  <div key={info.label} className="bg-light dark:bg-gray-900 p-6 rounded-xl">
                     <div className="flex items-start gap-4">
                       <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0">
                         <info.icon className="w-6 h-6 text-primary" />
                       </div>
                       <div>
-                        <h3 className="text-sm text-muted uppercase tracking-wide mb-1">
+                        <h3 className="text-sm text-muted dark:text-gray-400 uppercase tracking-wide mb-1">
                           {info.label}
                         </h3>
                         {info.href ? (
                           <a
                             href={info.href}
-                            className="text-lg text-dark font-medium hover:text-primary transition-colors"
+                            className="text-lg text-dark dark:text-white font-medium hover:text-primary transition-colors"
                           >
                             {info.value}
                           </a>
                         ) : (
-                          <p className="text-lg text-dark font-medium">{info.value}</p>
+                          <p className="text-lg text-dark dark:text-white font-medium">{info.value}</p>
                         )}
                       </div>
                     </div>
@@ -397,7 +397,7 @@ export default function Contact() {
         </div>
       </section>
 
-      <section className="bg-light">
+      <section className="bg-light dark:bg-gray-900">
         <div className="container-custom py-8">
           <motion.div
             initial="hidden"
@@ -406,7 +406,7 @@ export default function Contact() {
             variants={fadeInUp}
             className="text-center mb-8"
           >
-            <h2 className="text-2xl font-serif text-dark">Find Us</h2>
+            <h2 className="text-2xl font-serif text-dark dark:text-white">Find Us</h2>
           </motion.div>
         </div>
         <div className="h-[450px] relative">

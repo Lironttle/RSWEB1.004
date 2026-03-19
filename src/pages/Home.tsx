@@ -199,9 +199,9 @@ export default function Home() {
               initial={{ opacity: 0, y: 60 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 1 }}
-              className="bg-white/90 backdrop-blur-lg shadow-2xl rounded-2xl overflow-hidden"
+              className="bg-white/90 dark:bg-gray-800/90 backdrop-blur-lg shadow-2xl rounded-2xl overflow-hidden"
             >
-              <div className="grid md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-gray-200">
+              <div className="grid md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-gray-200 dark:divide-gray-700">
                 {trustIndicators.map((item) => (
                   <div
                     key={item.description}
@@ -211,14 +211,14 @@ export default function Home() {
                       <item.icon className="w-7 h-7 text-primary" />
                     </div>
                     <div className="flex items-baseline justify-center gap-2 mb-2">
-                      <span className="text-4xl lg:text-5xl font-serif text-dark">
+                      <span className="text-4xl lg:text-5xl font-serif text-dark dark:text-white">
                         {item.value}
                       </span>
-                      <span className="text-lg text-muted font-medium">
+                      <span className="text-lg text-muted dark:text-gray-400 font-medium">
                         {item.label}
                       </span>
                     </div>
-                    <p className="text-muted text-sm">{item.description}</p>
+                    <p className="text-muted dark:text-gray-400 text-sm">{item.description}</p>
                   </div>
                 ))}
               </div>
@@ -227,7 +227,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="section-padding bg-white pt-40 md:pt-48">
+      <section className="section-padding bg-white dark:bg-gray-950 pt-40 md:pt-48">
         <div className="container-custom">
           <motion.div
             initial="hidden"
@@ -241,11 +241,11 @@ export default function Home() {
             </motion.div>
             <motion.h2
               variants={fadeInUp}
-              className="text-4xl md:text-5xl font-serif text-dark mb-6"
+              className="text-4xl md:text-5xl font-serif text-dark dark:text-white mb-6"
             >
               Our Services
             </motion.h2>
-            <motion.p variants={fadeInUp} className="text-muted text-lg">
+            <motion.p variants={fadeInUp} className="text-muted dark:text-gray-400 text-lg">
               Comprehensive construction solutions for every project
             </motion.p>
           </motion.div>
@@ -265,15 +265,15 @@ export default function Home() {
               >
                 <Link
                   to={service.link}
-                  className="group block bg-white p-8 h-full shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300 rounded-lg border border-gray-100"
+                  className="group block bg-white dark:bg-gray-900 p-8 h-full shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300 rounded-lg border border-gray-100 dark:border-gray-800"
                 >
                   <div className="w-14 h-14 bg-primary/10 rounded-lg flex items-center justify-center mb-6 group-hover:bg-primary transition-colors duration-300">
                     <service.icon className="w-7 h-7 text-primary group-hover:text-white transition-colors duration-300" />
                   </div>
-                  <h3 className="text-xl font-semibold text-dark mb-3">
+                  <h3 className="text-xl font-semibold text-dark dark:text-white mb-3">
                     {service.title}
                   </h3>
-                  <p className="text-muted mb-4 leading-relaxed">{service.description}</p>
+                  <p className="text-muted dark:text-gray-400 mb-4 leading-relaxed">{service.description}</p>
                   <span className="inline-flex items-center gap-2 text-primary text-sm font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                     Learn More
                     <ArrowRight
@@ -309,7 +309,7 @@ export default function Home() {
 
       <ClientLogos />
 
-      <section className="section-padding bg-gray-50">
+      <section className="section-padding bg-gray-50 dark:bg-gray-900">
         <div className="container-custom">
           <motion.div
             initial="hidden"
@@ -323,7 +323,7 @@ export default function Home() {
             </motion.div>
             <motion.h2
               variants={fadeInUp}
-              className="text-4xl md:text-5xl font-serif text-dark mb-6"
+              className="text-4xl md:text-5xl font-serif text-dark dark:text-white mb-6"
             >
               What Our Clients Say
             </motion.h2>
@@ -341,17 +341,17 @@ export default function Home() {
                 key={testimonial.client}
                 variants={fadeInUp}
                 transition={{ duration: 0.6 }}
-                className="bg-white rounded-2xl p-8 lg:p-10 shadow-lg"
+                className="bg-white dark:bg-gray-800 rounded-2xl p-8 lg:p-10 shadow-lg"
               >
                 <Quote className="w-10 h-10 text-primary mb-6" />
-                <p className="text-lg text-gray-700 leading-relaxed mb-8">
+                <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed mb-8">
                   "{testimonial.quote}"
                 </p>
                 <div>
-                  <p className="font-semibold text-dark text-lg">
+                  <p className="font-semibold text-dark dark:text-white text-lg">
                     {testimonial.client}
                   </p>
-                  <p className="text-muted text-sm">{testimonial.role}</p>
+                  <p className="text-muted dark:text-gray-400 text-sm">{testimonial.role}</p>
                 </div>
               </motion.div>
             ))}
@@ -361,7 +361,7 @@ export default function Home() {
 
       <CertificateLogos />
 
-      <section className="section-padding bg-light">
+      <section className="section-padding bg-light dark:bg-gray-900">
         <div className="container-custom">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <motion.div
@@ -373,10 +373,10 @@ export default function Home() {
               <span className="inline-block text-primary text-sm font-medium tracking-wider uppercase mb-4">
                 About Us
               </span>
-              <h2 className="text-4xl md:text-5xl font-serif text-dark mb-6">
+              <h2 className="text-4xl md:text-5xl font-serif text-dark dark:text-white mb-6">
                 Why Choose RS Construction?
               </h2>
-              <p className="text-muted text-lg mb-8 leading-relaxed">
+              <p className="text-muted dark:text-gray-400 text-lg mb-8 leading-relaxed">
                 With over 16 years of experience in the construction industry, RS
                 Construction and Property Services Ltd has established itself as a
                 trusted partner for residential and commercial projects across the UK.
@@ -386,7 +386,7 @@ export default function Home() {
                 {reasons.map((reason) => (
                   <li key={reason} className="flex items-start gap-3">
                     <CheckCircle className="w-5 h-5 text-primary flex-shrink-0 mt-1" />
-                    <span className="text-dark">{reason}</span>
+                    <span className="text-dark dark:text-gray-200">{reason}</span>
                   </li>
                 ))}
               </ul>
