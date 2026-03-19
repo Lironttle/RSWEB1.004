@@ -186,6 +186,12 @@ export default function Careers() {
     }
   };
 
+  const inputClasses =
+    'w-full px-4 py-3 border border-gray-200 dark:border-gray-700 rounded-lg focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-all bg-white dark:bg-gray-900 dark:text-white';
+
+  const selectClasses =
+    'w-full px-4 py-3 border border-gray-200 dark:border-gray-700 rounded-lg focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-all bg-white dark:bg-gray-900 dark:text-white';
+
   return (
     <main>
       <section
@@ -196,18 +202,18 @@ export default function Careers() {
           backgroundPosition: 'center',
         }}
       >
-        <div className="absolute inset-0 bg-gradient-to-r from-white via-white/95 to-white/80" />
+        <div className="absolute inset-0 bg-gradient-to-r from-white dark:from-gray-950 via-white/95 dark:via-gray-950/95 to-white/80 dark:to-gray-950/80" />
 
         <div className="relative container-custom py-32">
           <motion.nav
             initial={{ opacity: 0, y: -10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
-            className="flex items-center gap-2 text-sm text-muted mb-6"
+            className="flex items-center gap-2 text-sm text-muted dark:text-gray-400 mb-6"
           >
             <Link to="/" className="hover:text-primary transition-colors">Home</Link>
             <ChevronRight size={16} />
-            <span className="text-dark font-medium">Careers</span>
+            <span className="text-dark dark:text-white font-medium">Careers</span>
           </motion.nav>
 
           <motion.div
@@ -225,7 +231,7 @@ export default function Careers() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.1 }}
-            className="text-5xl md:text-6xl lg:text-7xl font-serif text-dark mb-6"
+            className="text-5xl md:text-6xl lg:text-7xl font-serif text-dark dark:text-white mb-6"
           >
             Join Our Team
           </motion.h1>
@@ -234,7 +240,7 @@ export default function Careers() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="text-xl text-muted max-w-2xl mb-10"
+            className="text-xl text-muted dark:text-gray-400 max-w-2xl mb-10"
           >
             Build your career with one of London's most trusted construction companies.
             We're always looking for talented individuals to join our growing team.
@@ -246,29 +252,29 @@ export default function Careers() {
             transition={{ duration: 0.6, delay: 0.3 }}
             className="flex flex-wrap gap-4"
           >
-            <div className="inline-flex items-center gap-3 bg-white shadow-lg px-6 py-4 rounded-xl">
+            <div className="inline-flex items-center gap-3 bg-white dark:bg-gray-800 shadow-lg px-6 py-4 rounded-xl">
               <div className="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center">
                 <Clock className="w-5 h-5 text-primary" />
               </div>
               <div>
-                <div className="text-2xl font-serif text-dark">16+</div>
-                <div className="text-sm text-muted">Years in Business</div>
+                <div className="text-2xl font-serif text-dark dark:text-white">16+</div>
+                <div className="text-sm text-muted dark:text-gray-400">Years in Business</div>
               </div>
             </div>
-            <div className="inline-flex items-center gap-3 bg-white shadow-lg px-6 py-4 rounded-xl">
+            <div className="inline-flex items-center gap-3 bg-white dark:bg-gray-800 shadow-lg px-6 py-4 rounded-xl">
               <div className="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center">
                 <Users className="w-5 h-5 text-primary" />
               </div>
               <div>
-                <div className="text-2xl font-serif text-dark">50+</div>
-                <div className="text-sm text-muted">Team Members</div>
+                <div className="text-2xl font-serif text-dark dark:text-white">50+</div>
+                <div className="text-sm text-muted dark:text-gray-400">Team Members</div>
               </div>
             </div>
           </motion.div>
         </div>
       </section>
 
-      <section className="section-padding bg-white">
+      <section className="section-padding bg-white dark:bg-gray-950">
         <div className="container-custom">
           <motion.div
             initial="hidden"
@@ -282,11 +288,11 @@ export default function Careers() {
             </motion.div>
             <motion.h2
               variants={fadeInUp}
-              className="text-4xl md:text-5xl font-serif text-dark mb-6"
+              className="text-4xl md:text-5xl font-serif text-dark dark:text-white mb-6"
             >
               Why RS Construction?
             </motion.h2>
-            <motion.p variants={fadeInUp} className="text-muted text-lg">
+            <motion.p variants={fadeInUp} className="text-muted dark:text-gray-400 text-lg">
               Join a team that values your growth, rewards your effort, and treats you like family
             </motion.p>
           </motion.div>
@@ -302,15 +308,15 @@ export default function Careers() {
               <motion.div
                 key={item.title}
                 variants={fadeInUp}
-                className="bg-gray-50 p-8 rounded-2xl hover:shadow-lg hover:-translate-y-1 transition-all duration-300"
+                className="bg-gray-50 dark:bg-gray-900 p-8 rounded-2xl hover:shadow-lg hover:-translate-y-1 transition-all duration-300"
               >
                 <div className="w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center mb-6">
                   <item.icon className="w-7 h-7 text-primary" />
                 </div>
-                <h3 className="text-xl font-semibold text-dark mb-3">
+                <h3 className="text-xl font-semibold text-dark dark:text-white mb-3">
                   {item.title}
                 </h3>
-                <p className="text-muted leading-relaxed">
+                <p className="text-muted dark:text-gray-400 leading-relaxed">
                   {item.description}
                 </p>
               </motion.div>
@@ -319,7 +325,7 @@ export default function Careers() {
         </div>
       </section>
 
-      <section className="section-padding bg-light">
+      <section className="section-padding bg-light dark:bg-gray-900">
         <div className="container-custom">
           <motion.div
             initial="hidden"
@@ -333,11 +339,11 @@ export default function Careers() {
             </motion.div>
             <motion.h2
               variants={fadeInUp}
-              className="text-4xl md:text-5xl font-serif text-dark mb-6"
+              className="text-4xl md:text-5xl font-serif text-dark dark:text-white mb-6"
             >
               Employee Benefits
             </motion.h2>
-            <motion.p variants={fadeInUp} className="text-muted text-lg">
+            <motion.p variants={fadeInUp} className="text-muted dark:text-gray-400 text-lg">
               We take care of our team with a comprehensive benefits package
             </motion.p>
           </motion.div>
@@ -353,19 +359,19 @@ export default function Careers() {
               <motion.div
                 key={benefit.text}
                 variants={fadeInUp}
-                className="bg-white p-5 rounded-xl flex items-center gap-4 hover:shadow-md transition-shadow"
+                className="bg-white dark:bg-gray-800 p-5 rounded-xl flex items-center gap-4 hover:shadow-md transition-shadow"
               >
                 <div className="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0">
                   <benefit.icon className="w-5 h-5 text-primary" />
                 </div>
-                <span className="text-dark text-sm font-medium">{benefit.text}</span>
+                <span className="text-dark dark:text-gray-200 text-sm font-medium">{benefit.text}</span>
               </motion.div>
             ))}
           </motion.div>
         </div>
       </section>
 
-      <section className="section-padding bg-white">
+      <section className="section-padding bg-white dark:bg-gray-950">
         <div className="container-custom">
           <motion.div
             initial="hidden"
@@ -379,11 +385,11 @@ export default function Careers() {
             </motion.div>
             <motion.h2
               variants={fadeInUp}
-              className="text-4xl md:text-5xl font-serif text-dark mb-6"
+              className="text-4xl md:text-5xl font-serif text-dark dark:text-white mb-6"
             >
               How to Apply
             </motion.h2>
-            <motion.p variants={fadeInUp} className="text-muted text-lg">
+            <motion.p variants={fadeInUp} className="text-muted dark:text-gray-400 text-lg">
               Our simple application process gets you started quickly
             </motion.p>
           </motion.div>
@@ -395,7 +401,7 @@ export default function Careers() {
             variants={staggerContainer}
             className="relative"
           >
-            <div className="hidden lg:block absolute top-1/2 left-0 right-0 h-0.5 bg-gray-200 -translate-y-1/2 z-0" />
+            <div className="hidden lg:block absolute top-1/2 left-0 right-0 h-0.5 bg-gray-200 dark:bg-gray-700 -translate-y-1/2 z-0" />
 
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 relative z-10">
               {applicationSteps.map((step, index) => (
@@ -404,16 +410,16 @@ export default function Careers() {
                   variants={fadeInUp}
                   className="text-center"
                 >
-                  <div className="w-20 h-20 bg-white border-2 border-primary rounded-full flex items-center justify-center mx-auto mb-6 relative">
+                  <div className="w-20 h-20 bg-white dark:bg-gray-900 border-2 border-primary rounded-full flex items-center justify-center mx-auto mb-6 relative">
                     <step.icon className="w-8 h-8 text-primary" />
                     <span className="absolute -top-2 -right-2 w-8 h-8 bg-primary text-white rounded-full flex items-center justify-center text-sm font-bold">
                       {index + 1}
                     </span>
                   </div>
-                  <h3 className="text-xl font-semibold text-dark mb-3">
+                  <h3 className="text-xl font-semibold text-dark dark:text-white mb-3">
                     {step.title}
                   </h3>
-                  <p className="text-muted">
+                  <p className="text-muted dark:text-gray-400">
                     {step.description}
                   </p>
                 </motion.div>
@@ -423,7 +429,7 @@ export default function Careers() {
         </div>
       </section>
 
-      <section id="apply" className="section-padding bg-gray-50">
+      <section id="apply" className="section-padding bg-gray-50 dark:bg-gray-900">
         <div className="container-custom">
           <div className="max-w-3xl mx-auto">
             <motion.div
@@ -438,11 +444,11 @@ export default function Careers() {
               </motion.div>
               <motion.h2
                 variants={fadeInUp}
-                className="text-4xl md:text-5xl font-serif text-dark mb-6"
+                className="text-4xl md:text-5xl font-serif text-dark dark:text-white mb-6"
               >
                 Apply Now
               </motion.h2>
-              <motion.p variants={fadeInUp} className="text-muted text-lg">
+              <motion.p variants={fadeInUp} className="text-muted dark:text-gray-400 text-lg">
                 Take the first step towards your new career
               </motion.p>
             </motion.div>
@@ -452,15 +458,15 @@ export default function Careers() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
-              className="bg-white rounded-2xl shadow-xl p-8 md:p-12"
+              className="bg-white dark:bg-gray-800 rounded-2xl shadow-xl p-8 md:p-12"
             >
               {submitStatus === 'success' ? (
                 <div className="text-center py-12">
-                  <div className="w-20 h-20 bg-emerald-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                  <div className="w-20 h-20 bg-emerald-100 dark:bg-emerald-900/30 rounded-full flex items-center justify-center mx-auto mb-6">
                     <CheckCircle className="w-10 h-10 text-emerald-600" />
                   </div>
-                  <h3 className="text-2xl font-serif text-dark mb-4">Application Submitted!</h3>
-                  <p className="text-muted mb-8">
+                  <h3 className="text-2xl font-serif text-dark dark:text-white mb-4">Application Submitted!</h3>
+                  <p className="text-muted dark:text-gray-400 mb-8">
                     Thank you for your interest in joining RS Construction. Our HR team will review your application and be in touch within 5 working days.
                   </p>
                   <button
@@ -475,7 +481,7 @@ export default function Careers() {
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <div className="grid md:grid-cols-2 gap-6">
                     <div>
-                      <label htmlFor="fullName" className="block text-sm font-medium text-dark mb-2">
+                      <label htmlFor="fullName" className="block text-sm font-medium text-dark dark:text-gray-200 mb-2">
                         Full Name <span className="text-primary">*</span>
                       </label>
                       <input
@@ -485,12 +491,12 @@ export default function Careers() {
                         required
                         value={formData.fullName}
                         onChange={handleInputChange}
-                        className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-all"
+                        className={inputClasses}
                         placeholder="John Smith"
                       />
                     </div>
                     <div>
-                      <label htmlFor="email" className="block text-sm font-medium text-dark mb-2">
+                      <label htmlFor="email" className="block text-sm font-medium text-dark dark:text-gray-200 mb-2">
                         Email Address <span className="text-primary">*</span>
                       </label>
                       <input
@@ -500,7 +506,7 @@ export default function Careers() {
                         required
                         value={formData.email}
                         onChange={handleInputChange}
-                        className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-all"
+                        className={inputClasses}
                         placeholder="john@example.com"
                       />
                     </div>
@@ -508,7 +514,7 @@ export default function Careers() {
 
                   <div className="grid md:grid-cols-2 gap-6">
                     <div>
-                      <label htmlFor="phone" className="block text-sm font-medium text-dark mb-2">
+                      <label htmlFor="phone" className="block text-sm font-medium text-dark dark:text-gray-200 mb-2">
                         Phone Number <span className="text-primary">*</span>
                       </label>
                       <input
@@ -518,12 +524,12 @@ export default function Careers() {
                         required
                         value={formData.phone}
                         onChange={handleInputChange}
-                        className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-all"
+                        className={inputClasses}
                         placeholder="07123 456789"
                       />
                     </div>
                     <div>
-                      <label htmlFor="position" className="block text-sm font-medium text-dark mb-2">
+                      <label htmlFor="position" className="block text-sm font-medium text-dark dark:text-gray-200 mb-2">
                         Position Applying For <span className="text-primary">*</span>
                       </label>
                       <select
@@ -532,7 +538,7 @@ export default function Careers() {
                         required
                         value={formData.position}
                         onChange={handleInputChange}
-                        className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-all bg-white"
+                        className={selectClasses}
                       >
                         <option value="">Select a position</option>
                         {positions.map((pos) => (
@@ -543,8 +549,8 @@ export default function Careers() {
                   </div>
 
                   <div>
-                    <label htmlFor="cv" className="block text-sm font-medium text-dark mb-2">
-                      Upload CV <span className="text-muted font-normal">(PDF, DOC, DOCX)</span>
+                    <label htmlFor="cv" className="block text-sm font-medium text-dark dark:text-gray-200 mb-2">
+                      Upload CV <span className="text-muted dark:text-gray-400 font-normal">(PDF, DOC, DOCX)</span>
                     </label>
                     <div className="relative">
                       <input
@@ -555,17 +561,17 @@ export default function Careers() {
                         onChange={handleFileChange}
                         className="absolute inset-0 w-full h-full opacity-0 cursor-pointer"
                       />
-                      <div className="flex items-center gap-4 px-4 py-3 border border-gray-200 border-dashed rounded-lg bg-gray-50 hover:bg-gray-100 transition-colors">
+                      <div className="flex items-center gap-4 px-4 py-3 border border-gray-200 dark:border-gray-700 border-dashed rounded-lg bg-gray-50 dark:bg-gray-900 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">
                         <div className="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center">
                           <FileText className="w-5 h-5 text-primary" />
                         </div>
                         <div>
                           {formData.cvFilename ? (
-                            <p className="text-dark font-medium">{formData.cvFilename}</p>
+                            <p className="text-dark dark:text-white font-medium">{formData.cvFilename}</p>
                           ) : (
                             <>
-                              <p className="text-dark font-medium">Click to upload your CV</p>
-                              <p className="text-sm text-muted">or drag and drop</p>
+                              <p className="text-dark dark:text-white font-medium">Click to upload your CV</p>
+                              <p className="text-sm text-muted dark:text-gray-400">or drag and drop</p>
                             </>
                           )}
                         </div>
@@ -574,8 +580,8 @@ export default function Careers() {
                   </div>
 
                   <div>
-                    <label htmlFor="coverLetter" className="block text-sm font-medium text-dark mb-2">
-                      Cover Letter <span className="text-muted font-normal">(Optional)</span>
+                    <label htmlFor="coverLetter" className="block text-sm font-medium text-dark dark:text-gray-200 mb-2">
+                      Cover Letter <span className="text-muted dark:text-gray-400 font-normal">(Optional)</span>
                     </label>
                     <textarea
                       id="coverLetter"
@@ -583,13 +589,13 @@ export default function Careers() {
                       rows={5}
                       value={formData.coverLetter}
                       onChange={handleInputChange}
-                      className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-all resize-none"
+                      className="w-full px-4 py-3 border border-gray-200 dark:border-gray-700 rounded-lg focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-all resize-none bg-white dark:bg-gray-900 dark:text-white"
                       placeholder="Tell us why you'd like to join RS Construction..."
                     />
                   </div>
 
                   <div>
-                    <label htmlFor="hearAboutUs" className="block text-sm font-medium text-dark mb-2">
+                    <label htmlFor="hearAboutUs" className="block text-sm font-medium text-dark dark:text-gray-200 mb-2">
                       How did you hear about us?
                     </label>
                     <select
@@ -597,7 +603,7 @@ export default function Careers() {
                       name="hearAboutUs"
                       value={formData.hearAboutUs}
                       onChange={handleInputChange}
-                      className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-all bg-white"
+                      className={selectClasses}
                     >
                       <option value="">Select an option</option>
                       {hearAboutOptions.map((opt) => (
@@ -616,13 +622,13 @@ export default function Careers() {
                       onChange={handleInputChange}
                       className="w-5 h-5 text-primary border-gray-300 rounded focus:ring-primary mt-0.5"
                     />
-                    <label htmlFor="rightToWorkUk" className="text-muted">
+                    <label htmlFor="rightToWorkUk" className="text-muted dark:text-gray-400">
                       I confirm that I have the right to work in the UK <span className="text-primary">*</span>
                     </label>
                   </div>
 
                   {submitStatus === 'error' && (
-                    <div className="bg-red-50 text-red-700 px-4 py-3 rounded-lg">
+                    <div className="bg-red-50 dark:bg-red-900/20 text-red-700 dark:text-red-400 px-4 py-3 rounded-lg">
                       There was an error submitting your application. Please try again.
                     </div>
                   )}

@@ -52,12 +52,12 @@ const logos: Logo[] = [
 
 export default function ClientLogos() {
   return (
-    <section className="py-16 bg-white">
+    <section className="py-16 bg-white dark:bg-gray-950">
       <div className="container-custom flex flex-col items-center text-center">
-        <h2 className="text-3xl md:text-4xl font-serif text-dark">
+        <h2 className="text-3xl md:text-4xl font-serif text-dark dark:text-white">
           Our Clients
         </h2>
-        <p className="text-muted mt-2">Trusted by leading organisations across London</p>
+        <p className="text-muted dark:text-gray-400 mt-2">Trusted by leading organisations across London</p>
       </div>
       <div className="pt-10 md:pt-12">
         <div className="relative mx-auto flex items-center justify-center lg:max-w-5xl">
@@ -75,15 +75,15 @@ export default function ClientLogos() {
                     <img
                       src={logo.image}
                       alt={logo.description}
-                      className="h-20 w-auto max-w-[160px] object-contain"
+                      className="h-20 w-auto max-w-[160px] object-contain dark:brightness-0 dark:invert dark:opacity-70"
                     />
                   </div>
                 </CarouselItem>
               ))}
             </CarouselContent>
           </Carousel>
-          <div className="pointer-events-none absolute inset-y-0 left-0 w-12 bg-gradient-to-r from-white to-transparent" />
-          <div className="pointer-events-none absolute inset-y-0 right-0 w-12 bg-gradient-to-l from-white to-transparent" />
+          <div className="pointer-events-none absolute inset-y-0 left-0 w-12 bg-gradient-to-r from-white dark:from-gray-950 to-transparent" />
+          <div className="pointer-events-none absolute inset-y-0 right-0 w-12 bg-gradient-to-l from-white dark:from-gray-950 to-transparent" />
         </div>
       </div>
     </section>
