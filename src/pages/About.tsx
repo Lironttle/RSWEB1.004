@@ -126,8 +126,8 @@ export default function About() {
             >
               <div className="relative">
                 <img
-                  src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?auto=format&fit=crop&w=800&q=80"
-                  alt="RS Construction Team"
+                  src="/images/photos/director.png"
+                  alt="RS Construction Director"
                   className="rounded-2xl w-full h-[500px] object-cover"
                 />
                 <div className="absolute -bottom-6 -right-6 bg-primary text-white p-6 rounded-xl">
