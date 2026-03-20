@@ -187,10 +187,10 @@ export default function Careers() {
   };
 
   const inputClasses =
-    'w-full px-4 py-3 border border-gray-200 dark:border-gray-700 rounded-lg focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-all bg-white dark:bg-gray-900 dark:text-white';
+    'w-full px-4 py-3 border border-gray-200 dark:border-surface-border rounded-lg focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-all bg-white dark:bg-surface-dark dark:text-white';
 
   const selectClasses =
-    'w-full px-4 py-3 border border-gray-200 dark:border-gray-700 rounded-lg focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-all bg-white dark:bg-gray-900 dark:text-white';
+    'w-full px-4 py-3 border border-gray-200 dark:border-surface-border rounded-lg focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-all bg-white dark:bg-surface-dark dark:text-white';
 
   return (
     <main>
@@ -202,7 +202,7 @@ export default function Careers() {
           backgroundPosition: 'center',
         }}
       >
-        <div className="absolute inset-0 bg-gradient-to-r from-white dark:from-gray-950 via-white/95 dark:via-gray-950/95 to-white/80 dark:to-gray-950/80" />
+        <div className="absolute inset-0 bg-gradient-to-r from-white dark:from-dark via-white/95 dark:via-dark/95 to-white/80 dark:to-dark/80" />
 
         <div className="relative container-custom py-32">
           <motion.nav
@@ -252,7 +252,7 @@ export default function Careers() {
             transition={{ duration: 0.6, delay: 0.3 }}
             className="flex flex-wrap gap-4"
           >
-            <div className="inline-flex items-center gap-3 bg-white dark:bg-gray-800 shadow-lg px-6 py-4 rounded-xl">
+            <div className="inline-flex items-center gap-3 bg-white dark:bg-surface shadow-lg px-6 py-4 rounded-xl">
               <div className="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center">
                 <Clock className="w-5 h-5 text-primary" />
               </div>
@@ -261,7 +261,7 @@ export default function Careers() {
                 <div className="text-sm text-muted dark:text-gray-400">Years in Business</div>
               </div>
             </div>
-            <div className="inline-flex items-center gap-3 bg-white dark:bg-gray-800 shadow-lg px-6 py-4 rounded-xl">
+            <div className="inline-flex items-center gap-3 bg-white dark:bg-surface shadow-lg px-6 py-4 rounded-xl">
               <div className="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center">
                 <Users className="w-5 h-5 text-primary" />
               </div>
@@ -274,7 +274,7 @@ export default function Careers() {
         </div>
       </section>
 
-      <section className="section-padding bg-white dark:bg-gray-950">
+      <section className="section-padding bg-white dark:bg-dark">
         <div className="container-custom">
           <motion.div
             initial="hidden"
@@ -308,7 +308,7 @@ export default function Careers() {
               <motion.div
                 key={item.title}
                 variants={fadeInUp}
-                className="bg-gray-50 dark:bg-gray-900 p-8 rounded-2xl hover:shadow-lg hover:-translate-y-1 transition-all duration-300"
+                className="bg-gray-50 dark:bg-surface-dark p-8 rounded-2xl hover:shadow-lg hover:-translate-y-1 transition-all duration-300"
               >
                 <div className="w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center mb-6">
                   <item.icon className="w-7 h-7 text-primary" />
@@ -325,7 +325,7 @@ export default function Careers() {
         </div>
       </section>
 
-      <section className="section-padding bg-light dark:bg-gray-900">
+      <section className="section-padding bg-light dark:bg-surface-dark">
         <div className="container-custom">
           <motion.div
             initial="hidden"
@@ -359,7 +359,7 @@ export default function Careers() {
               <motion.div
                 key={benefit.text}
                 variants={fadeInUp}
-                className="bg-white dark:bg-gray-800 p-5 rounded-xl flex items-center gap-4 hover:shadow-md transition-shadow"
+                className="bg-white dark:bg-surface p-5 rounded-xl flex items-center gap-4 hover:shadow-md transition-shadow"
               >
                 <div className="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0">
                   <benefit.icon className="w-5 h-5 text-primary" />
@@ -371,7 +371,7 @@ export default function Careers() {
         </div>
       </section>
 
-      <section className="section-padding bg-white dark:bg-gray-950">
+      <section className="section-padding bg-white dark:bg-dark">
         <div className="container-custom">
           <motion.div
             initial="hidden"
@@ -401,7 +401,7 @@ export default function Careers() {
             variants={staggerContainer}
             className="relative"
           >
-            <div className="hidden lg:block absolute top-1/2 left-0 right-0 h-0.5 bg-gray-200 dark:bg-gray-700 -translate-y-1/2 z-0" />
+            <div className="hidden lg:block absolute top-1/2 left-0 right-0 h-0.5 bg-gray-200 dark:bg-surface-border -translate-y-1/2 z-0" />
 
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 relative z-10">
               {applicationSteps.map((step, index) => (
@@ -410,7 +410,7 @@ export default function Careers() {
                   variants={fadeInUp}
                   className="text-center"
                 >
-                  <div className="w-20 h-20 bg-white dark:bg-gray-900 border-2 border-primary rounded-full flex items-center justify-center mx-auto mb-6 relative">
+                  <div className="w-20 h-20 bg-white dark:bg-surface-dark border-2 border-primary rounded-full flex items-center justify-center mx-auto mb-6 relative">
                     <step.icon className="w-8 h-8 text-primary" />
                     <span className="absolute -top-2 -right-2 w-8 h-8 bg-primary text-white rounded-full flex items-center justify-center text-sm font-bold">
                       {index + 1}
@@ -429,7 +429,7 @@ export default function Careers() {
         </div>
       </section>
 
-      <section id="apply" className="section-padding bg-gray-50 dark:bg-gray-900">
+      <section id="apply" className="section-padding bg-gray-50 dark:bg-surface-dark">
         <div className="container-custom">
           <div className="max-w-3xl mx-auto">
             <motion.div
@@ -458,11 +458,11 @@ export default function Careers() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
-              className="bg-white dark:bg-gray-800 rounded-2xl shadow-xl p-8 md:p-12"
+              className="bg-white dark:bg-surface rounded-2xl shadow-xl p-8 md:p-12"
             >
               {submitStatus === 'success' ? (
                 <div className="text-center py-12">
-                  <div className="w-20 h-20 bg-emerald-100 dark:bg-emerald-900/30 rounded-full flex items-center justify-center mx-auto mb-6">
+                  <div className="w-20 h-20 bg-emerald-100 dark:bg-emerald-950/30 rounded-full flex items-center justify-center mx-auto mb-6">
                     <CheckCircle className="w-10 h-10 text-emerald-600" />
                   </div>
                   <h3 className="text-2xl font-serif text-dark dark:text-white mb-4">Application Submitted!</h3>
@@ -561,7 +561,7 @@ export default function Careers() {
                         onChange={handleFileChange}
                         className="absolute inset-0 w-full h-full opacity-0 cursor-pointer"
                       />
-                      <div className="flex items-center gap-4 px-4 py-3 border border-gray-200 dark:border-gray-700 border-dashed rounded-lg bg-gray-50 dark:bg-gray-900 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">
+                      <div className="flex items-center gap-4 px-4 py-3 border border-gray-200 dark:border-surface-border border-dashed rounded-lg bg-gray-50 dark:bg-surface-dark hover:bg-gray-100 dark:hover:bg-surface transition-colors">
                         <div className="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center">
                           <FileText className="w-5 h-5 text-primary" />
                         </div>
@@ -589,7 +589,7 @@ export default function Careers() {
                       rows={5}
                       value={formData.coverLetter}
                       onChange={handleInputChange}
-                      className="w-full px-4 py-3 border border-gray-200 dark:border-gray-700 rounded-lg focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-all resize-none bg-white dark:bg-gray-900 dark:text-white"
+                      className="w-full px-4 py-3 border border-gray-200 dark:border-surface-border rounded-lg focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-all resize-none bg-white dark:bg-surface-dark dark:text-white"
                       placeholder="Tell us why you'd like to join RS Construction..."
                     />
                   </div>
@@ -628,7 +628,7 @@ export default function Careers() {
                   </div>
 
                   {submitStatus === 'error' && (
-                    <div className="bg-red-50 dark:bg-red-900/20 text-red-700 dark:text-red-400 px-4 py-3 rounded-lg">
+                    <div className="bg-red-50 dark:bg-red-950/20 text-red-700 dark:text-red-400 px-4 py-3 rounded-lg">
                       There was an error submitting your application. Please try again.
                     </div>
                   )}

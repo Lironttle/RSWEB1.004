@@ -21,6 +21,12 @@ export default {
         dark: '#0A0A0A',
         light: '#F9FAFB',
         muted: '#6B7280',
+        surface: {
+          DEFAULT: '#1A1A1A',
+          light: '#222222',
+          dark: '#111111',
+          border: '#2A2A2A',
+        },
       },
       fontFamily: {
         serif: ['Playfair Display', 'Georgia', 'serif'],

@@ -199,11 +199,11 @@ export default function Estimates() {
 
   const inputClasses = (hasError: boolean) =>
     `w-full px-4 py-3 rounded-lg border ${
-      hasError ? 'border-red-500' : 'border-gray-200 dark:border-gray-700'
-    } focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-colors bg-white dark:bg-gray-900 dark:text-white`;
+      hasError ? 'border-red-500' : 'border-gray-200 dark:border-surface-border'
+    } focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-colors bg-white dark:bg-surface-dark dark:text-white`;
 
   const selectClasses =
-    'w-full px-4 py-3 rounded-lg border border-gray-200 dark:border-gray-700 focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-colors bg-white dark:bg-gray-900 dark:text-white';
+    'w-full px-4 py-3 rounded-lg border border-gray-200 dark:border-surface-border focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-colors bg-white dark:bg-surface-dark dark:text-white';
 
   return (
     <main>
@@ -215,7 +215,7 @@ export default function Estimates() {
           backgroundPosition: 'center',
         }}
       >
-        <div className="absolute inset-0 bg-gradient-to-r from-white dark:from-gray-950 via-white/95 dark:via-gray-950/95 to-white/70 dark:to-gray-950/70" />
+        <div className="absolute inset-0 bg-gradient-to-r from-white dark:from-dark via-white/95 dark:via-dark/95 to-white/70 dark:to-dark/70" />
 
         <div className="relative container-custom py-32">
           <motion.nav
@@ -250,7 +250,7 @@ export default function Estimates() {
         </div>
       </section>
 
-      <section className="py-20 md:py-28 bg-light dark:bg-gray-900">
+      <section className="py-20 md:py-28 bg-light dark:bg-surface-dark">
         <div className="container-custom">
           <div className="grid lg:grid-cols-3 gap-12 lg:gap-16">
             <motion.div
@@ -260,9 +260,9 @@ export default function Estimates() {
               transition={{ duration: 0.6 }}
               className="lg:col-span-2"
             >
-              <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-lg p-8 md:p-10">
+              <div className="bg-white dark:bg-surface rounded-2xl shadow-lg p-8 md:p-10">
                 {submitStatus === 'success' && (
-                  <div className="mb-8 p-4 bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800 rounded-lg flex items-center gap-3">
+                  <div className="mb-8 p-4 bg-green-50 dark:bg-green-950/20 border border-green-200 dark:border-green-800 rounded-lg flex items-center gap-3">
                     <CheckCircle className="w-5 h-5 text-green-600 flex-shrink-0" />
                     <p className="text-green-800 dark:text-green-400">
                       Thank you for your request! We'll get back to you within 24 hours.
@@ -271,7 +271,7 @@ export default function Estimates() {
                 )}
 
                 {submitStatus === 'error' && (
-                  <div className="mb-8 p-4 bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 rounded-lg flex items-center gap-3">
+                  <div className="mb-8 p-4 bg-red-50 dark:bg-red-950/20 border border-red-200 dark:border-red-800 rounded-lg flex items-center gap-3">
                     <AlertCircle className="w-5 h-5 text-red-600 flex-shrink-0" />
                     <p className="text-red-800 dark:text-red-400">
                       Something went wrong. Please try again or call us directly.
@@ -339,7 +339,7 @@ export default function Estimates() {
                     </div>
                   </div>
 
-                  <div className="border-t border-gray-100 dark:border-gray-700 pt-8">
+                  <div className="border-t border-gray-100 dark:border-surface-border pt-8">
                     <h3 className="text-lg font-semibold text-dark dark:text-white mb-4">Project Details</h3>
                     <div className="grid md:grid-cols-2 gap-6">
                       <div>
@@ -434,7 +434,7 @@ export default function Estimates() {
                     </div>
                   </div>
 
-                  <div className="border-t border-gray-100 dark:border-gray-700 pt-8">
+                  <div className="border-t border-gray-100 dark:border-surface-border pt-8">
                     <label htmlFor="description" className="block text-sm font-medium text-dark dark:text-gray-200 mb-2">
                       Project Description
                     </label>
@@ -444,12 +444,12 @@ export default function Estimates() {
                       value={formData.description}
                       onChange={handleChange}
                       rows={5}
-                      className="w-full px-4 py-3 rounded-lg border border-gray-200 dark:border-gray-700 focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-colors resize-none bg-white dark:bg-gray-900 dark:text-white"
+                      className="w-full px-4 py-3 rounded-lg border border-gray-200 dark:border-surface-border focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-colors resize-none bg-white dark:bg-surface-dark dark:text-white"
                       placeholder="Tell us about your project requirements, any specific needs, or questions you have..."
                     />
                   </div>
 
-                  <div className="border-t border-gray-100 dark:border-gray-700 pt-8">
+                  <div className="border-t border-gray-100 dark:border-surface-border pt-8">
                     <label className="block text-sm font-medium text-dark dark:text-gray-200 mb-2">
                       Attach Plans or Photos
                     </label>
@@ -457,7 +457,7 @@ export default function Estimates() {
                       onDragOver={(e) => e.preventDefault()}
                       onDrop={handleFileDrop}
                       onClick={() => fileInputRef.current?.click()}
-                      className="border-2 border-dashed border-gray-200 dark:border-gray-700 rounded-lg p-8 text-center cursor-pointer hover:border-primary/50 hover:bg-primary/5 transition-colors"
+                      className="border-2 border-dashed border-gray-200 dark:border-surface-border rounded-lg p-8 text-center cursor-pointer hover:border-primary/50 hover:bg-primary/5 transition-colors"
                     >
                       <Upload className="w-10 h-10 text-gray-400 mx-auto mb-4" />
                       <p className="text-muted dark:text-gray-400 mb-2">
@@ -481,7 +481,7 @@ export default function Estimates() {
                         {files.map((file, index) => (
                           <div
                             key={index}
-                            className="flex items-center justify-between p-3 bg-gray-50 dark:bg-gray-900 rounded-lg"
+                            className="flex items-center justify-between p-3 bg-gray-50 dark:bg-surface-dark rounded-lg"
                           >
                             <div className="flex items-center gap-3">
                               <FileText className="w-5 h-5 text-gray-400" />
@@ -492,7 +492,7 @@ export default function Estimates() {
                             <button
                               type="button"
                               onClick={() => removeFile(index)}
-                              className="p-1 hover:bg-gray-200 dark:hover:bg-gray-700 rounded transition-colors"
+                              className="p-1 hover:bg-gray-200 dark:hover:bg-surface-border rounded transition-colors"
                             >
                               <X className="w-4 h-4 text-gray-500" />
                             </button>
@@ -502,7 +502,7 @@ export default function Estimates() {
                     )}
                   </div>
 
-                  <div className="border-t border-gray-100 dark:border-gray-700 pt-8">
+                  <div className="border-t border-gray-100 dark:border-surface-border pt-8">
                     <label className="flex items-start gap-3 cursor-pointer">
                       <input
                         type="checkbox"
@@ -546,7 +546,7 @@ export default function Estimates() {
               transition={{ duration: 0.6, delay: 0.2 }}
               className="lg:col-span-1"
             >
-              <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-lg p-8 sticky top-40">
+              <div className="bg-white dark:bg-surface rounded-2xl shadow-lg p-8 sticky top-40">
                 <h3 className="text-xl font-serif text-dark dark:text-white mb-6">
                   Why Choose RS Construction?
                 </h3>
@@ -567,7 +567,7 @@ export default function Estimates() {
                   ))}
                 </ul>
 
-                <div className="mt-8 pt-8 border-t border-gray-100 dark:border-gray-700">
+                <div className="mt-8 pt-8 border-t border-gray-100 dark:border-surface-border">
                   <p className="text-sm text-muted dark:text-gray-400 mb-4">
                     Prefer to speak with someone directly?
                   </p>

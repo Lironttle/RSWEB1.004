@@ -101,7 +101,7 @@ export default function Services() {
           backgroundPosition: 'center',
         }}
       >
-        <div className="absolute inset-0 bg-gradient-to-r from-white dark:from-gray-950 via-white/95 dark:via-gray-950/95 to-white/70 dark:to-gray-950/70" />
+        <div className="absolute inset-0 bg-gradient-to-r from-white dark:from-dark via-white/95 dark:via-dark/95 to-white/70 dark:to-dark/70" />
 
         <div className="relative container-custom py-32">
           <motion.nav
@@ -137,7 +137,7 @@ export default function Services() {
         </div>
       </section>
 
-      <section className="py-20 md:py-28 bg-white dark:bg-gray-950">
+      <section className="py-20 md:py-28 bg-white dark:bg-dark">
         <div className="container-custom">
           {services.map((service, index) => {
             const isEven = index % 2 === 0;
