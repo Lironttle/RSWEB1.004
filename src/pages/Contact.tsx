@@ -53,7 +53,7 @@ const contactInfo = [
   {
     icon: Clock,
     label: 'Opening Hours',
-    value: 'Mon-Fri 8am-6pm',
+    value: 'Mon-Fri 8am-5pm',
     href: null,
   },
 ];
