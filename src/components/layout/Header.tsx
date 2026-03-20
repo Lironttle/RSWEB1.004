@@ -33,21 +33,23 @@ export default function Header() {
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50">
-      <div className="bg-dark text-white py-2">
-        <div className="container-custom flex justify-end items-center gap-6 text-sm">
+      <div className="bg-dark text-white py-1.5 sm:py-2">
+        <div className="container-custom flex justify-between sm:justify-end items-center gap-3 sm:gap-6 text-xs sm:text-sm">
           <a
             href="tel:02074732842"
-            className="flex items-center gap-2 hover:text-primary transition-colors"
+            className="flex items-center gap-1.5 sm:gap-2 hover:text-primary transition-colors"
           >
             <Phone size={14} />
-            020 7473 2842
+            <span className="hidden xs:inline">020 7473 2842</span>
+            <span className="xs:hidden">Call Us</span>
           </a>
           <a
             href="mailto:info@rs-construction.com"
-            className="flex items-center gap-2 hover:text-primary transition-colors"
+            className="flex items-center gap-1.5 sm:gap-2 hover:text-primary transition-colors"
           >
             <Mail size={14} />
-            info@rs-construction.com
+            <span className="hidden sm:inline">info@rs-construction.com</span>
+            <span className="sm:hidden">Email</span>
           </a>
           <button
             onClick={toggleTheme}
@@ -65,7 +67,7 @@ export default function Header() {
         }`}
       >
         <div className="container-custom">
-          <div className="flex items-center justify-between h-20">
+          <div className="flex items-center justify-between h-16 sm:h-20">
             <Link to="/" className="flex-shrink-0">
               <img
                 src="/images/logo/RS LOGO.png"
@@ -113,11 +115,11 @@ export default function Header() {
       <AnimatePresence>
         {isMobileMenuOpen && (
           <motion.div
-            initial={{ opacity: 0, x: '100%' }}
+            initial={{ opacity: 0, x: '-100%' }}
             animate={{ opacity: 1, x: 0 }}
-            exit={{ opacity: 0, x: '100%' }}
+            exit={{ opacity: 0, x: '-100%' }}
             transition={{ type: 'tween', duration: 0.3 }}
-            className="fixed inset-y-0 right-0 w-full max-w-sm bg-white dark:bg-surface-dark shadow-2xl lg:hidden z-50"
+            className="fixed inset-y-0 left-0 w-full max-w-sm bg-white dark:bg-surface-dark shadow-2xl lg:hidden z-50"
           >
             <div className="flex flex-col h-full">
               <div className="flex items-center justify-between p-6 border-b dark:border-surface-border">

@@ -103,12 +103,12 @@ export default function Services() {
       >
         <div className="absolute inset-0 bg-gradient-to-r from-white dark:from-dark via-white/95 dark:via-dark/95 to-white/70 dark:to-dark/70" />
 
-        <div className="relative container-custom py-32">
+        <div className="relative container-custom py-20 sm:py-32">
           <motion.nav
             initial={{ opacity: 0, y: -10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
-            className="flex items-center gap-2 text-sm text-muted dark:text-gray-400 mb-6"
+            className="flex items-center gap-2 text-sm text-muted dark:text-gray-400 mb-4 sm:mb-6"
           >
             <Link to="/" className="hover:text-primary transition-colors">Home</Link>
             <ChevronRight size={16} />
@@ -119,7 +119,7 @@ export default function Services() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.1 }}
-            className="text-5xl md:text-6xl lg:text-7xl font-serif text-dark dark:text-white mb-6"
+            className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-serif text-dark dark:text-white mb-6"
           >
             Our Services
           </motion.h1>
@@ -146,13 +146,13 @@ export default function Services() {
               <div
                 key={service.id}
                 className={`grid lg:grid-cols-2 gap-12 lg:gap-20 items-center ${
-                  index !== services.length - 1 ? 'mb-24 lg:mb-32' : ''
+                  index !== services.length - 1 ? 'mb-16 sm:mb-24 lg:mb-32' : ''
                 }`}
               >
                 <motion.div
                   initial="hidden"
                   whileInView="visible"
-                  viewport={{ once: true, margin: '-100px' }}
+                  viewport={{ once: true, margin: '-50px' }}
                   variants={isEven ? fadeInLeft : fadeInRight}
                   transition={{ duration: 0.6 }}
                   className={`${isEven ? 'lg:order-1' : 'lg:order-2'}`}
@@ -161,7 +161,7 @@ export default function Services() {
                     <img
                       src={service.image}
                       alt={service.title}
-                      className="w-full h-[400px] object-cover hover:scale-105 transition-transform duration-700"
+                      className="w-full h-[250px] sm:h-[350px] lg:h-[400px] object-cover hover:scale-105 transition-transform duration-700"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-dark/20 to-transparent" />
                   </div>
@@ -212,7 +212,7 @@ export default function Services() {
         </div>
       </section>
 
-      <section className="py-24 bg-dark">
+      <section className="py-16 sm:py-24 bg-dark">
         <div className="container-custom text-center">
           <motion.div
             initial="hidden"
@@ -221,10 +221,10 @@ export default function Services() {
             variants={fadeInUp}
             transition={{ duration: 0.6 }}
           >
-            <h2 className="text-4xl md:text-5xl font-serif text-white mb-6">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif text-white mb-4 sm:mb-6">
               Ready to Start Your Project?
             </h2>
-            <p className="text-xl text-gray-400 mb-10 max-w-2xl mx-auto">
+            <p className="text-lg sm:text-xl text-gray-400 mb-8 sm:mb-10 max-w-2xl mx-auto">
               Get in touch with our team today for a free consultation and quote
               on your construction or property service needs.
             </p>

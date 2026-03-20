@@ -155,12 +155,12 @@ export default function Contact() {
       >
         <div className="absolute inset-0 bg-gradient-to-r from-white dark:from-dark via-white/95 dark:via-dark/95 to-white/70 dark:to-dark/70" />
 
-        <div className="relative container-custom py-32">
+        <div className="relative container-custom py-20 sm:py-32">
           <motion.nav
             initial={{ opacity: 0, y: -10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
-            className="flex items-center gap-2 text-sm text-muted dark:text-gray-400 mb-6"
+            className="flex items-center gap-2 text-sm text-muted dark:text-gray-400 mb-4 sm:mb-6"
           >
             <Link to="/" className="hover:text-primary transition-colors">Home</Link>
             <ChevronRight size={16} />
@@ -171,7 +171,7 @@ export default function Contact() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.1 }}
-            className="text-5xl md:text-6xl lg:text-7xl font-serif text-dark dark:text-white mb-6"
+            className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-serif text-dark dark:text-white mb-6"
           >
             Get In Touch
           </motion.h1>

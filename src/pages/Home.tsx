@@ -131,7 +131,7 @@ export default function Home() {
           <div className="absolute inset-0 bg-gradient-to-t from-dark via-dark/60 to-dark/30" />
         </div>
 
-        <div className="relative container-custom text-center pt-32 pb-48">
+        <div className="relative container-custom text-center pt-24 pb-32 sm:pt-32 sm:pb-48">
           <motion.div
             initial="hidden"
             animate="visible"
@@ -151,7 +151,7 @@ export default function Home() {
             <motion.h1
               variants={fadeInUp}
               transition={{ duration: 0.6 }}
-              className="text-5xl md:text-6xl lg:text-7xl font-serif text-white leading-tight mb-8"
+              className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-serif text-white leading-tight mb-6 sm:mb-8"
             >
               Building Excellence,
               <br />
@@ -227,7 +227,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="section-padding bg-white dark:bg-dark pt-40 md:pt-48">
+      <section className="section-padding bg-white dark:bg-dark pt-28 sm:pt-40 md:pt-48">
         <div className="container-custom">
           <motion.div
             initial="hidden"
@@ -414,10 +414,10 @@ export default function Home() {
                 <img
                   src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=800&q=80"
                   alt="Construction site"
-                  className="w-full h-auto shadow-2xl"
+                  className="w-full h-auto shadow-2xl rounded-lg"
                 />
-                <div className="absolute -bottom-8 -left-8 bg-primary text-white p-8 shadow-xl">
-                  <div className="text-5xl font-serif mb-2">16+</div>
+                <div className="absolute -bottom-4 -left-4 sm:-bottom-8 sm:-left-8 bg-primary text-white p-4 sm:p-8 shadow-xl">
+                  <div className="text-3xl sm:text-5xl font-serif mb-1 sm:mb-2">16+</div>
                   <div className="text-sm uppercase tracking-wider">
                     Years of Excellence
                   </div>
@@ -468,7 +468,7 @@ export default function Home() {
       </section>
 
       <section
-        className="relative py-32 bg-cover bg-center bg-fixed"
+        className="relative py-20 sm:py-32 bg-cover bg-center bg-fixed"
         style={{
           backgroundImage:
             'url(https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=2070&q=80)',
@@ -482,10 +482,10 @@ export default function Home() {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <h2 className="text-4xl md:text-5xl font-serif text-white mb-6">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif text-white mb-4 sm:mb-6">
               Ready to Start Your Project?
             </h2>
-            <p className="text-xl text-gray-300 mb-10 max-w-2xl mx-auto">
+            <p className="text-lg sm:text-xl text-gray-300 mb-8 sm:mb-10 max-w-2xl mx-auto">
               Get in touch with our team today for a free, no-obligation estimate
               on your construction project.
             </p>

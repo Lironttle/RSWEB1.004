@@ -204,12 +204,12 @@ export default function Careers() {
       >
         <div className="absolute inset-0 bg-gradient-to-r from-white dark:from-dark via-white/95 dark:via-dark/95 to-white/80 dark:to-dark/80" />
 
-        <div className="relative container-custom py-32">
+        <div className="relative container-custom py-20 sm:py-32">
           <motion.nav
             initial={{ opacity: 0, y: -10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
-            className="flex items-center gap-2 text-sm text-muted dark:text-gray-400 mb-6"
+            className="flex items-center gap-2 text-sm text-muted dark:text-gray-400 mb-4 sm:mb-6"
           >
             <Link to="/" className="hover:text-primary transition-colors">Home</Link>
             <ChevronRight size={16} />
@@ -220,9 +220,9 @@ export default function Careers() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="mb-6"
+            className="mb-4 sm:mb-6"
           >
-            <div className="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center mb-8">
+            <div className="w-12 h-12 sm:w-16 sm:h-16 bg-primary/10 rounded-2xl flex items-center justify-center mb-6 sm:mb-8">
               <Briefcase className="w-8 h-8 text-primary" />
             </div>
           </motion.div>
@@ -231,7 +231,7 @@ export default function Careers() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.1 }}
-            className="text-5xl md:text-6xl lg:text-7xl font-serif text-dark dark:text-white mb-6"
+            className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-serif text-dark dark:text-white mb-4 sm:mb-6"
           >
             Join Our Team
           </motion.h1>
@@ -240,7 +240,7 @@ export default function Careers() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="text-xl text-muted dark:text-gray-400 max-w-2xl mb-10"
+            className="text-lg sm:text-xl text-muted dark:text-gray-400 max-w-2xl mb-8 sm:mb-10"
           >
             Build your career with one of London's most trusted construction companies.
             We're always looking for talented individuals to join our growing team.
@@ -458,7 +458,7 @@ export default function Careers() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
-              className="bg-white dark:bg-surface rounded-2xl shadow-xl p-8 md:p-12"
+              className="bg-white dark:bg-surface rounded-2xl shadow-xl p-5 sm:p-8 md:p-12"
             >
               {submitStatus === 'success' ? (
                 <div className="text-center py-12">

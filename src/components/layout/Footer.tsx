@@ -4,7 +4,7 @@ export default function Footer() {
   return (
     <footer className="bg-white dark:bg-surface-dark">
       <div className="container-custom">
-        <div className="py-16 flex flex-col md:flex-row items-center md:items-start justify-between gap-12">
+        <div className="py-10 sm:py-16 flex flex-col md:flex-row items-center md:items-start justify-between gap-8 sm:gap-12">
           <div className="flex flex-col items-center md:items-start">
             <img
               src="/images/logo/RS LOGO.png"
@@ -66,8 +66,8 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="py-6 border-t border-gray-200 dark:border-surface-border">
-          <div className="flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-muted dark:text-gray-400">
+        <div className="py-4 sm:py-6 border-t border-gray-200 dark:border-surface-border">
+          <div className="flex flex-col md:flex-row items-center justify-between gap-3 sm:gap-4 text-xs sm:text-sm text-muted dark:text-gray-400 text-center md:text-left">
             <p>
               &copy; 2026 RS Construction & Property Services LTD. All rights reserved.
             </p>

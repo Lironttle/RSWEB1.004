@@ -82,12 +82,12 @@ export default function About() {
       >
         <div className="absolute inset-0 bg-gradient-to-r from-white dark:from-dark via-white/95 dark:via-dark/95 to-white/70 dark:to-dark/70" />
 
-        <div className="relative container-custom py-32">
+        <div className="relative container-custom py-20 sm:py-32">
           <motion.nav
             initial={{ opacity: 0, y: -10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
-            className="flex items-center gap-2 text-sm text-muted dark:text-gray-400 mb-6"
+            className="flex items-center gap-2 text-sm text-muted dark:text-gray-400 mb-4 sm:mb-6"
           >
             <Link to="/" className="hover:text-primary transition-colors">Home</Link>
             <ChevronRight size={16} />
@@ -98,7 +98,7 @@ export default function About() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.1 }}
-            className="text-5xl md:text-6xl lg:text-7xl font-serif text-dark dark:text-white mb-6"
+            className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-serif text-dark dark:text-white mb-6"
           >
             About RS Construction
           </motion.h1>
@@ -128,9 +128,9 @@ export default function About() {
                 <img
                   src="/images/photos/director.png"
                   alt="RS Construction Director"
-                  className="rounded-2xl w-full h-[500px] object-cover"
+                  className="rounded-2xl w-full h-[300px] sm:h-[400px] lg:h-[500px] object-cover"
                 />
-                <div className="absolute -bottom-6 -right-6 bg-primary text-white p-6 rounded-xl">
+                <div className="absolute -bottom-4 -right-4 sm:-bottom-6 sm:-right-6 bg-primary text-white p-4 sm:p-6 rounded-xl">
                   <div className="text-4xl font-bold">16+</div>
                   <div className="text-sm opacity-90">Years Experience</div>
                 </div>
@@ -295,7 +295,7 @@ export default function About() {
         </div>
       </section>
 
-      <section className="py-24 bg-dark">
+      <section className="py-16 sm:py-24 bg-dark">
         <div className="container-custom text-center">
           <motion.div
             initial="hidden"
@@ -304,10 +304,10 @@ export default function About() {
             variants={fadeInUp}
             transition={{ duration: 0.6 }}
           >
-            <h2 className="text-4xl md:text-5xl font-serif text-white mb-6">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif text-white mb-4 sm:mb-6">
               Get in Touch for a No-Obligation Quote
             </h2>
-            <p className="text-xl text-gray-400 mb-10 max-w-2xl mx-auto">
+            <p className="text-lg sm:text-xl text-gray-400 mb-8 sm:mb-10 max-w-2xl mx-auto">
               Ready to discuss your project? Our team is here to help with expert
               advice and competitive pricing.
             </p>
