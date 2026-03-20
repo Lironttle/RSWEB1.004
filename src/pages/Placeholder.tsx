@@ -25,7 +25,7 @@ export default function Placeholder() {
 
   return (
     <main className="pt-32">
-      <section className="section-padding bg-light dark:bg-gray-900">
+      <section className="section-padding bg-light dark:bg-surface-dark">
         <div className="container-custom">
           <motion.div
             initial={{ opacity: 0, y: 30 }}

@@ -80,7 +80,7 @@ export default function About() {
           backgroundPosition: 'center',
         }}
       >
-        <div className="absolute inset-0 bg-gradient-to-r from-white dark:from-gray-950 via-white/95 dark:via-gray-950/95 to-white/70 dark:to-gray-950/70" />
+        <div className="absolute inset-0 bg-gradient-to-r from-white dark:from-dark via-white/95 dark:via-dark/95 to-white/70 dark:to-dark/70" />
 
         <div className="relative container-custom py-32">
           <motion.nav
@@ -115,7 +115,7 @@ export default function About() {
         </div>
       </section>
 
-      <section className="py-20 md:py-28 bg-white dark:bg-gray-950">
+      <section className="py-20 md:py-28 bg-white dark:bg-dark">
         <div className="container-custom">
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
             <motion.div
@@ -166,7 +166,7 @@ export default function About() {
         </div>
       </section>
 
-      <section className="py-20 md:py-28 bg-light dark:bg-gray-900">
+      <section className="py-20 md:py-28 bg-light dark:bg-surface-dark">
         <div className="container-custom">
           <motion.div
             initial="hidden"
@@ -192,7 +192,7 @@ export default function About() {
               <motion.div
                 key={value.title}
                 variants={fadeInUp}
-                className="bg-white dark:bg-gray-800 p-8 rounded-2xl shadow-sm hover:shadow-lg transition-shadow duration-300"
+                className="bg-white dark:bg-surface p-8 rounded-2xl shadow-sm hover:shadow-lg transition-shadow duration-300"
               >
                 <div className="w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center mb-6">
                   <value.icon className="w-7 h-7 text-primary" />
@@ -209,7 +209,7 @@ export default function About() {
         </div>
       </section>
 
-      <section className="py-20 md:py-28 bg-white dark:bg-gray-950">
+      <section className="py-20 md:py-28 bg-white dark:bg-dark">
         <div className="container-custom">
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
             <motion.div
@@ -248,7 +248,7 @@ export default function About() {
               transition={{ duration: 0.6, delay: 0.2 }}
               className="relative"
             >
-              <div className="bg-light dark:bg-gray-900 rounded-2xl p-8 relative overflow-hidden">
+              <div className="bg-light dark:bg-surface-dark rounded-2xl p-8 relative overflow-hidden">
                 <div className="absolute inset-0 opacity-10">
                   <svg viewBox="0 0 400 400" className="w-full h-full">
                     <circle cx="200" cy="200" r="150" fill="none" stroke="currentColor" strokeWidth="1" className="text-primary" />
@@ -259,19 +259,19 @@ export default function About() {
 
                 <div className="relative grid grid-cols-3 gap-4">
                   <div className="col-start-2 flex justify-center">
-                    <div className="bg-white dark:bg-gray-800 p-4 rounded-xl shadow-sm text-center">
+                    <div className="bg-white dark:bg-surface p-4 rounded-xl shadow-sm text-center">
                       <MapPin className="w-6 h-6 text-muted dark:text-gray-400 mx-auto mb-2" />
                       <span className="text-sm text-muted dark:text-gray-400">North</span>
                     </div>
                   </div>
                   <div className="flex justify-center">
-                    <div className="bg-white dark:bg-gray-800 p-4 rounded-xl shadow-sm text-center">
+                    <div className="bg-white dark:bg-surface p-4 rounded-xl shadow-sm text-center">
                       <MapPin className="w-6 h-6 text-muted dark:text-gray-400 mx-auto mb-2" />
                       <span className="text-sm text-muted dark:text-gray-400">West</span>
                     </div>
                   </div>
                   <div className="flex justify-center">
-                    <div className="bg-white dark:bg-gray-800 p-4 rounded-xl shadow-sm text-center">
+                    <div className="bg-white dark:bg-surface p-4 rounded-xl shadow-sm text-center">
                       <MapPin className="w-6 h-6 text-muted dark:text-gray-400 mx-auto mb-2" />
                       <span className="text-sm text-muted dark:text-gray-400">Central</span>
                     </div>
@@ -283,7 +283,7 @@ export default function About() {
                     </div>
                   </div>
                   <div className="col-start-2 flex justify-center">
-                    <div className="bg-white dark:bg-gray-800 p-4 rounded-xl shadow-sm text-center">
+                    <div className="bg-white dark:bg-surface p-4 rounded-xl shadow-sm text-center">
                       <MapPin className="w-6 h-6 text-muted dark:text-gray-400 mx-auto mb-2" />
                       <span className="text-sm text-muted dark:text-gray-400">South</span>
                     </div>

@@ -199,9 +199,9 @@ export default function Home() {
               initial={{ opacity: 0, y: 60 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 1 }}
-              className="bg-white/90 dark:bg-gray-800/90 backdrop-blur-lg shadow-2xl rounded-2xl overflow-hidden"
+              className="bg-white/90 dark:bg-surface/90 backdrop-blur-lg shadow-2xl rounded-2xl overflow-hidden"
             >
-              <div className="grid md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-gray-200 dark:divide-gray-700">
+              <div className="grid md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-gray-200 dark:divide-surface-border">
                 {trustIndicators.map((item) => (
                   <div
                     key={item.description}
@@ -227,7 +227,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="section-padding bg-white dark:bg-gray-950 pt-40 md:pt-48">
+      <section className="section-padding bg-white dark:bg-dark pt-40 md:pt-48">
         <div className="container-custom">
           <motion.div
             initial="hidden"
@@ -265,7 +265,7 @@ export default function Home() {
               >
                 <Link
                   to={service.link}
-                  className="group block bg-white dark:bg-gray-900 p-8 h-full shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300 rounded-lg border border-gray-100 dark:border-gray-800"
+                  className="group block bg-white dark:bg-surface-dark p-8 h-full shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300 rounded-lg border border-gray-100 dark:border-surface-border"
                 >
                   <div className="w-14 h-14 bg-primary/10 rounded-lg flex items-center justify-center mb-6 group-hover:bg-primary transition-colors duration-300">
                     <service.icon className="w-7 h-7 text-primary group-hover:text-white transition-colors duration-300" />
@@ -309,7 +309,7 @@ export default function Home() {
 
       <ClientLogos />
 
-      <section className="section-padding bg-gray-50 dark:bg-gray-900">
+      <section className="section-padding bg-gray-50 dark:bg-surface-dark">
         <div className="container-custom">
           <motion.div
             initial="hidden"
@@ -341,7 +341,7 @@ export default function Home() {
                 key={testimonial.client}
                 variants={fadeInUp}
                 transition={{ duration: 0.6 }}
-                className="bg-white dark:bg-gray-800 rounded-2xl p-8 lg:p-10 shadow-lg"
+                className="bg-white dark:bg-surface rounded-2xl p-8 lg:p-10 shadow-lg"
               >
                 <Quote className="w-10 h-10 text-primary mb-6" />
                 <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed mb-8">
@@ -361,7 +361,7 @@ export default function Home() {
 
       <CertificateLogos />
 
-      <section className="section-padding bg-light dark:bg-gray-900">
+      <section className="section-padding bg-light dark:bg-surface-dark">
         <div className="container-custom">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <motion.div

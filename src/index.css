@@ -8,7 +8,7 @@
   }
 
   body {
-    @apply font-sans text-dark dark:text-gray-200 antialiased bg-white dark:bg-gray-950;
+    @apply font-sans text-dark dark:text-gray-200 antialiased bg-white dark:bg-dark;
   }
 
   h1, h2, h3, h4, h5, h6 {
@@ -18,7 +18,7 @@
 
 @layer components {
   .glass-card {
-    @apply bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm border border-white/20 dark:border-gray-700/20 shadow-lg;
+    @apply bg-white/80 dark:bg-surface/80 backdrop-blur-sm border border-white/20 dark:border-surface-border/20 shadow-lg;
   }
 
   .btn-primary {

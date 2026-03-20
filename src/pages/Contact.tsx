@@ -153,7 +153,7 @@ export default function Contact() {
           backgroundPosition: 'center',
         }}
       >
-        <div className="absolute inset-0 bg-gradient-to-r from-white dark:from-gray-950 via-white/95 dark:via-gray-950/95 to-white/70 dark:to-gray-950/70" />
+        <div className="absolute inset-0 bg-gradient-to-r from-white dark:from-dark via-white/95 dark:via-dark/95 to-white/70 dark:to-dark/70" />
 
         <div className="relative container-custom py-32">
           <motion.nav
@@ -188,7 +188,7 @@ export default function Contact() {
         </div>
       </section>
 
-      <section className="py-20 md:py-28 bg-white dark:bg-gray-950">
+      <section className="py-20 md:py-28 bg-white dark:bg-dark">
         <div className="container-custom">
           <div className="grid lg:grid-cols-5 gap-12 lg:gap-16">
             <motion.div
@@ -201,7 +201,7 @@ export default function Contact() {
               <h2 className="text-3xl font-serif text-dark dark:text-white mb-8">Send Us a Message</h2>
 
               {submitStatus === 'success' && (
-                <div className="mb-8 p-4 bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800 rounded-lg flex items-center gap-3">
+                <div className="mb-8 p-4 bg-green-50 dark:bg-green-950/20 border border-green-200 dark:border-green-800 rounded-lg flex items-center gap-3">
                   <CheckCircle className="w-5 h-5 text-green-600 flex-shrink-0" />
                   <p className="text-green-800 dark:text-green-400">
                     Thank you for your message! We'll get back to you within 24 hours.
@@ -210,7 +210,7 @@ export default function Contact() {
               )}
 
               {submitStatus === 'error' && (
-                <div className="mb-8 p-4 bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 rounded-lg flex items-center gap-3">
+                <div className="mb-8 p-4 bg-red-50 dark:bg-red-950/20 border border-red-200 dark:border-red-800 rounded-lg flex items-center gap-3">
                   <AlertCircle className="w-5 h-5 text-red-600 flex-shrink-0" />
                   <p className="text-red-800 dark:text-red-400">
                     Something went wrong. Please try again or call us directly.
@@ -231,8 +231,8 @@ export default function Contact() {
                       value={formData.name}
                       onChange={handleChange}
                       className={`w-full px-4 py-3 rounded-lg border ${
-                        errors.name ? 'border-red-500' : 'border-gray-200 dark:border-gray-700'
-                      } focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-colors bg-white dark:bg-gray-900 dark:text-white`}
+                        errors.name ? 'border-red-500' : 'border-gray-200 dark:border-surface-border'
+                      } focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-colors bg-white dark:bg-surface-dark dark:text-white`}
                       placeholder="Your name"
                     />
                     {errors.name && (
@@ -251,8 +251,8 @@ export default function Contact() {
                       value={formData.email}
                       onChange={handleChange}
                       className={`w-full px-4 py-3 rounded-lg border ${
-                        errors.email ? 'border-red-500' : 'border-gray-200 dark:border-gray-700'
-                      } focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-colors bg-white dark:bg-gray-900 dark:text-white`}
+                        errors.email ? 'border-red-500' : 'border-gray-200 dark:border-surface-border'
+                      } focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-colors bg-white dark:bg-surface-dark dark:text-white`}
                       placeholder="your@email.com"
                     />
                     {errors.email && (
@@ -273,8 +273,8 @@ export default function Contact() {
                       value={formData.phone}
                       onChange={handleChange}
                       className={`w-full px-4 py-3 rounded-lg border ${
-                        errors.phone ? 'border-red-500' : 'border-gray-200 dark:border-gray-700'
-                      } focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-colors bg-white dark:bg-gray-900 dark:text-white`}
+                        errors.phone ? 'border-red-500' : 'border-gray-200 dark:border-surface-border'
+                      } focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-colors bg-white dark:bg-surface-dark dark:text-white`}
                       placeholder="020 1234 5678"
                     />
                     {errors.phone && (
@@ -291,7 +291,7 @@ export default function Contact() {
                       name="service"
                       value={formData.service}
                       onChange={handleChange}
-                      className="w-full px-4 py-3 rounded-lg border border-gray-200 dark:border-gray-700 focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-colors bg-white dark:bg-gray-900 dark:text-white"
+                      className="w-full px-4 py-3 rounded-lg border border-gray-200 dark:border-surface-border focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-colors bg-white dark:bg-surface-dark dark:text-white"
                     >
                       <option value="">Select a service</option>
                       {services.map((service) => (
@@ -314,8 +314,8 @@ export default function Contact() {
                     onChange={handleChange}
                     rows={6}
                     className={`w-full px-4 py-3 rounded-lg border ${
-                      errors.message ? 'border-red-500' : 'border-gray-200 dark:border-gray-700'
-                    } focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-colors resize-none bg-white dark:bg-gray-900 dark:text-white`}
+                      errors.message ? 'border-red-500' : 'border-gray-200 dark:border-surface-border'
+                    } focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-colors resize-none bg-white dark:bg-surface-dark dark:text-white`}
                     placeholder="Tell us about your project..."
                   />
                   {errors.message && (
@@ -354,7 +354,7 @@ export default function Contact() {
 
               <div className="space-y-6">
                 {contactInfo.map((info) => (
-                  <div key={info.label} className="bg-light dark:bg-gray-900 p-6 rounded-xl">
+                  <div key={info.label} className="bg-light dark:bg-surface-dark p-6 rounded-xl">
                     <div className="flex items-start gap-4">
                       <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0">
                         <info.icon className="w-6 h-6 text-primary" />
@@ -397,7 +397,7 @@ export default function Contact() {
         </div>
       </section>
 
-      <section className="bg-light dark:bg-gray-900">
+      <section className="bg-light dark:bg-surface-dark">
         <div className="container-custom py-8">
           <motion.div
             initial="hidden"

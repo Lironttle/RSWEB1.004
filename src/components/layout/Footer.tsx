@@ -2,7 +2,7 @@ import { Phone, Mail, MapPin, Linkedin, Facebook, Clock } from 'lucide-react';
 
 export default function Footer() {
   return (
-    <footer className="bg-white dark:bg-gray-900">
+    <footer className="bg-white dark:bg-surface-dark">
       <div className="container-custom">
         <div className="py-16 flex flex-col md:flex-row items-center md:items-start justify-between gap-12">
           <div className="flex flex-col items-center md:items-start">
@@ -16,7 +16,7 @@ export default function Footer() {
                 href="https://linkedin.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-10 h-10 bg-dark dark:bg-gray-700 text-white flex items-center justify-center hover:bg-primary transition-colors"
+                className="w-10 h-10 bg-dark dark:bg-surface-border text-white flex items-center justify-center hover:bg-primary transition-colors"
                 aria-label="LinkedIn"
               >
                 <Linkedin size={18} />
@@ -25,7 +25,7 @@ export default function Footer() {
                 href="https://facebook.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-10 h-10 bg-dark dark:bg-gray-700 text-white flex items-center justify-center hover:bg-primary transition-colors"
+                className="w-10 h-10 bg-dark dark:bg-surface-border text-white flex items-center justify-center hover:bg-primary transition-colors"
                 aria-label="Facebook"
               >
                 <Facebook size={18} />
@@ -66,7 +66,7 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="py-6 border-t border-gray-200 dark:border-gray-700">
+        <div className="py-6 border-t border-gray-200 dark:border-surface-border">
           <div className="flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-muted dark:text-gray-400">
             <p>
               &copy; 2026 RS Construction & Property Services LTD. All rights reserved.
